@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>臺北市北投區關渡國民小學學務處生教組 | Guandu Elementary School</title>
   
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS CDN (Runtime compiler) -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- FontAwesome Icons -->
@@ -53,7 +53,103 @@
     }
   </script>
 
+  <!-- 
+    ★ 100% 獨立於 CDN 的本地 Fallback CSS 樣式表 ★
+    當使用者的瀏覽器、學校網管防火牆阻擋了 cdn.tailwindcss.com 外部編譯腳本時，
+    此處的原生 CSS 會立即啟動，強制約束校徽、學校名稱與導覽列的尺寸，絕對不會變大或溢出！
+  -->
   <style>
+    /* 1. 導覽列與標題的原生 CSS 強制約束 */
+    #sticky-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 12px 24px !important;
+      background-color: rgba(253, 253, 251, 0.95) !important;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.15) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    #sticky-header .group {
+      display: flex !important;
+      align-items: center !important;
+      gap: 12px !important;
+      text-decoration: none !important;
+    }
+
+    /* 強制約束校徽外框：不論 Tailwind 是否載入，校徽永遠維持在 44px ~ 52px */
+    #logo-container-wrapper {
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      min-height: 44px !important;
+      border-radius: 9999px !important;
+      background-color: #ffffff !important;
+      border: 1px solid rgba(197, 160, 89, 0.25) !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+      padding: 2px !important;
+    }
+
+    #logo-container-wrapper img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100% !important;
+      max-height: 100% !important;
+      object-fit: contain !important;
+    }
+
+    /* 學校名稱文字容器 */
+    .title-text-flex-container {
+      display: flex !important;
+      flex-direction: column !important;
+      text-align: left !important;
+    }
+
+    /* 強制約束學校標題字體大小，自適應縮放，決不溢出 */
+    #header-title {
+      font-family: "Noto Serif TC", Georgia, serif !important;
+      font-weight: 900 !important;
+      color: #8c2d19 !important; /* 經典磚紅色 */
+      font-size: 15px !important; /* 手機端小尺寸 fallback */
+      line-height: 1.2 !important;
+      letter-spacing: 0.05em !important;
+      white-space: nowrap !important; /* 防止換行擠壓 */
+    }
+
+    #header-subtitle {
+      font-family: "Cinzel", serif !important;
+      color: #a8853d !important;
+      font-size: 8px !important;
+      letter-spacing: 0.05em !important;
+      margin-top: 2px !important;
+      white-space: nowrap !important;
+    }
+
+    /* 當螢幕大於 640px 時，標題字體稍微放大 */
+    @media (min-width: 640px) {
+      #logo-container-wrapper {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        min-height: 52px !important;
+      }
+      #header-title {
+        font-size: 19px !important; /* 平板與電腦端尺寸 */
+      }
+      #header-subtitle {
+        font-size: 9px !important;
+      }
+      #sticky-header {
+        padding: 16px 48px !important;
+      }
+    }
+
     /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 10px;
@@ -112,14 +208,15 @@
 
   <!-- Header & Sticky Navbar -->
   <header id="sticky-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-4 px-6 md:px-12 flex justify-between items-center bg-transparent">
-    <!-- Logo and Title Group (No spaces) -->
+    <!-- Logo and Title Group (Spaces and classes optimized for ultra-safe fallback rendering) -->
     <a href="#" class="flex items-center gap-3 group">
-      <div class="relative w-12 h-12 md:w-14 h-14 bg-white/95 rounded-full p-1 shadow-md border border-gold/20 flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105">
-        <img src="assets/logo.png" alt="關渡國小校徽" class="w-full h-full object-contain">
+      <!-- Standard CSS styles are directly injected below to guarantee restriction -->
+      <div id="logo-container-wrapper" class="relative bg-white/95 rounded-full p-1 shadow-md border border-gold/20 flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105">
+        <img src="assets/logo.png" alt="關渡國小校徽">
       </div>
-      <div class="flex flex-col">
-        <span class="font-serif font-bold text-lg md:text-xl tracking-wider text-crimson transition-colors duration-300" id="header-title">臺北市關渡國小學務處生教組</span>
-        <span class="font-display text-[9px] md:text-[10px] tracking-widest text-gold-dark transition-colors duration-300" id="header-subtitle">GUANDU ELEMENTARY SCHOOL · STUDENT AFFAIRS</span>
+      <div class="title-text-flex-container flex flex-col">
+        <span class="font-serif font-bold tracking-wider text-crimson transition-colors duration-300" id="header-title">臺北市關渡國小學務處生教組</span>
+        <span class="font-display tracking-widest text-gold-dark transition-colors duration-300" id="header-subtitle">GUANDU ELEMENTARY SCHOOL · STUDENT AFFAIRS</span>
       </div>
     </a>
 
@@ -351,7 +448,7 @@
   </section>
 
 
-  <!-- SECTION: CONTACT (聯絡與諮詢 - Cleaned of the Form completely) -->
+  <!-- SECTION: CONTACT (聯絡與諮詢) -->
   <section id="contact" class="py-24 px-6 md:px-12 bg-watercolor relative overflow-hidden">
     <div class="max-w-4xl mx-auto relative z-10 text-center">
       
@@ -365,7 +462,7 @@
         親愛的家長，若您對於新生始業輔導、夏季制服現場現金購買，或是冬季制服填單預購登記等業務有任何疑問，歡迎隨時透過下方生教組專用管道與我們取得聯繫。
       </p>
 
-      <!-- Centered, High-End Contact Card (replacing the old split columns and form layout) -->
+      <!-- Centered, High-End Contact Card -->
       <div class="glass-card max-w-xl mx-auto rounded-3xl p-8 md:p-10 border-2 border-gold/30 shadow-2xl relative overflow-hidden text-left">
         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-gold/10 to-transparent rounded-bl-full pointer-events-none"></div>
         
