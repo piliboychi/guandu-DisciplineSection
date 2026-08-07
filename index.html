@@ -223,6 +223,7 @@
     <!-- Desktop Navigation -->
     <nav class="hidden lg:flex items-center gap-8 font-medium">
       <a href="#hero" class="text-slate hover:text-crimson border-b-2 border-transparent hover:border-crimson py-1 transition-all duration-300 tracking-wider">首頁</a>
+      <a href="#faq" class="text-slate hover:text-crimson border-b-2 border-transparent hover:border-crimson py-1 transition-all duration-300 tracking-wider">常見問答</a>
       <a href="#news" class="text-slate hover:text-crimson border-b-2 border-transparent hover:border-crimson py-1 transition-all duration-300 tracking-wider">最新消息</a>
       <a href="#contact" class="text-slate hover:text-crimson border-b-2 border-transparent hover:border-crimson py-1 transition-all duration-300 tracking-wider">聯絡生教組</a>
     </nav>
@@ -241,6 +242,7 @@
   <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="fixed inset-0 bg-cream/95 backdrop-blur-xl z-40 flex flex-col justify-center items-center gap-8 py-20 px-8 transition-all duration-500 ease-in-out transform translate-x-full lg:hidden">
     <a href="#hero" onclick="closeMobileMenu()" class="font-serif font-bold text-2xl text-slate hover:text-crimson tracking-wider transition-colors">首頁</a>
+    <a href="#faq" onclick="closeMobileMenu()" class="font-serif font-bold text-2xl text-slate hover:text-crimson tracking-wider transition-colors">常見問答</a>
     <a href="#news" onclick="closeMobileMenu()" class="font-serif font-bold text-2xl text-slate hover:text-crimson tracking-wider transition-colors">最新消息</a>
     <a href="#contact" onclick="closeMobileMenu()" class="font-serif font-bold text-2xl text-slate hover:text-crimson tracking-wider transition-colors">聯絡生教組</a>
     <div class="h-px w-24 bg-gold/50 my-2"></div>
@@ -338,7 +340,7 @@
 
           </div>
 
-          <!-- 👕 販售項目與購買方式 (Highly detailed user contents) -->
+          <!-- 👕 販售項目與購買方式 -->
           <div class="pt-4 border-t border-gold/20 space-y-4">
             
             <h3 class="text-sm font-bold text-slate-dark flex items-center gap-1.5">
@@ -373,12 +375,65 @@
               </div>
             </div>
 
-            <!-- Warm Reminder Box (Required text) -->
+            <!-- Warm Reminder Box -->
             <div class="p-3.5 bg-crimson/5 rounded-2xl border-l-4 border-crimson shadow-inner">
               <p class="text-xs md:text-sm font-black text-crimson leading-relaxed flex items-start gap-2">
                 <i class="fa-solid fa-circle-exclamation text-sm mt-0.5 animate-pulse shrink-0"></i>
                 <span>💡 溫馨提醒：冬季制服採預購制，當天不販售現貨，請家長留意！</span>
               </p>
+            </div>
+
+            <!-- 🔄 平日與學期中補購制服流程 -->
+            <div class="p-4 rounded-2xl bg-gold-pale/50 border border-gold/15 space-y-3 shadow-sm">
+              <h4 class="text-xs font-bold text-slate-dark flex items-center gap-1.5 border-b border-gold/25 pb-1.5">
+                <i class="fa-solid fa-truck-ramp-box text-gold-dark"></i>
+                <span>🔄 平日與學期中補購制服流程</span>
+              </h4>
+              <p class="text-xs text-slate/80 leading-relaxed text-justify">
+                若家長於上述販售日程之外（學期中）有制服補購需求，可依循下方與合作廠商的配合購買流程辦理：
+              </p>
+              
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                <!-- Step 1 -->
+                <div class="p-3 rounded-xl bg-white/80 border border-gold/10 text-center space-y-1">
+                  <span class="inline-flex w-5 h-5 bg-gold/20 text-gold-dark text-[10px] font-bold rounded-full items-center justify-center">1</span>
+                  <span class="block font-bold text-[11px] text-slate-dark">致電廠商</span>
+                  <span class="block text-[10px] text-slate/60 leading-tight">洽詢廠商確認所需尺寸與庫存</span>
+                </div>
+                <!-- Step 2 -->
+                <div class="p-3 rounded-xl bg-white/80 border border-gold/10 text-center space-y-1">
+                  <span class="inline-flex w-5 h-5 bg-gold/20 text-gold-dark text-[10px] font-bold rounded-full items-center justify-center">2</span>
+                  <span class="block font-bold text-[11px] text-slate-dark">匯款確認</span>
+                  <span class="block text-[10px] text-slate/60 leading-tight">依廠商匯款提示完成轉帳付款</span>
+                </div>
+                <!-- Step 3 -->
+                <div class="p-3 rounded-xl bg-white/80 border border-gold/10 text-center space-y-1">
+                  <span class="inline-flex w-5 h-5 bg-gold/20 text-gold-dark text-[10px] font-bold rounded-full items-center justify-center">3</span>
+                  <span class="block font-bold text-[11px] text-slate-dark">配送到校</span>
+                  <span class="block text-[10px] text-slate/60 leading-tight">廠商確認入帳後，將制服寄送至校</span>
+                </div>
+                <!-- Step 4 -->
+                <div class="p-3 rounded-xl bg-white/80 border border-gold/10 text-center space-y-1">
+                  <span class="inline-flex w-5 h-5 bg-gold/20 text-gold-dark text-[10px] font-bold rounded-full items-center justify-center">4</span>
+                  <span class="block font-bold text-[11px] text-slate-dark">學生帶回</span>
+                  <span class="block text-[10px] text-slate/60 leading-tight">生教組或導師收到後轉交孩子帶回</span>
+                </div>
+              </div>
+              
+              <!-- Manufacturer detail info (Fully completed with user's real details) -->
+              <div class="bg-white/95 p-4 rounded-xl border border-gold/15 text-[11px] text-slate/80 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <span class="bg-gold-pale px-2 py-0.5 rounded text-gold-dark font-bold text-[10px]">合作製售廠商</span>
+                    <span class="font-bold text-slate-dark text-xs">一富有限公司</span>
+                  </div>
+                  <p class="text-[10px] text-slate/50"><i class="fa-solid fa-map-location-dot mr-1 text-gold-dark"></i>廠商地址：新北市三重區重陽路一段128號3F</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-1.5 border-t md:border-t-0 border-gold/10 pt-2 md:pt-0 w-full md:w-auto">
+                  <span>📞 <strong>服務專線：</strong><a href="tel:02-2971-2213" class="text-crimson font-extrabold hover:underline">(02) 2971-2213</a></span>
+                  <span>💰 <strong>付款方式：</strong>匯款轉帳（廠商將於電話確認後提供帳號）</span>
+                </div>
+              </div>
             </div>
 
             <!-- Card Sub-Footer Sizing & Environment -->
@@ -395,15 +450,99 @@
 
     <!-- Bottom Scroll Indicator -->
     <div class="relative z-10 flex flex-col items-center pt-8">
-      <a href="#news" class="text-slate hover:text-crimson flex flex-col items-center gap-1 group transition-colors duration-300">
-        <span class="text-[10px] tracking-widest text-slate/60 uppercase group-hover:text-crimson/80 transition-colors">最新公告與生教組聯繫</span>
+      <a href="#faq" class="text-slate hover:text-crimson flex flex-col items-center gap-1 group transition-colors duration-300">
+        <span class="text-[10px] tracking-widest text-slate/60 uppercase group-hover:text-crimson/80 transition-colors">常見問題 FAQ</span>
         <i class="fa-solid fa-chevron-down animate-bounce text-sm"></i>
       </a>
     </div>
   </section>
 
 
-  <!-- SECTION: LATEST ANNOUNCEMENTS (最新公告) -->
+  <!-- SECTION: FAQ (🤔 制服怎麼買？常見問答) -->
+  <!-- Brand new highly styled responsive section for user's Q&A contents -->
+  <section id="faq" class="py-24 px-6 md:px-12 bg-watercolor relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-white/10 to-transparent"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-16 fade-in-section">
+        <span class="font-display text-xs md:text-sm tracking-[0.3em] text-gold-dark font-semibold uppercase block mb-2">COMMON QUESTIONS</span>
+        <h2 class="font-serif font-bold text-2xl md:text-4xl text-slate tracking-wider inline-block relative pb-3">
+          🤔 制服怎麼買？看這裡就懂！
+          <span class="absolute bottom-0 left-0 w-1/3 h-1 bg-crimson rounded-full"></span>
+          <span class="absolute bottom-0 left-1/3 w-2/3 h-0.5 bg-gold/50 rounded-full"></span>
+        </h2>
+        <div class="max-w-xl mx-auto mt-4 text-slate/70 text-sm md:text-base font-light">
+          學務處生教組為家長整理了最直覺的採購三大常見問題，解答您對於付款、取貨與預購的疑惑。
+        </div>
+      </div>
+
+      <!-- FAQ Accordion / Cards List -->
+      <div class="space-y-6 fade-in-section">
+        
+        <!-- Q1 Card -->
+        <div class="glass-card rounded-2xl p-6 md:p-8 border border-gold/15 bg-white/90 shadow-md transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <span class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center shrink-0 font-serif font-black text-sm">Q1</span>
+            <div class="space-y-3 w-full">
+              <h3 class="font-serif font-bold text-base md:text-lg text-slate-dark">夏季制服怎麼買？</h3>
+              <div class="p-4 bg-orange-50/50 border border-orange-100/50 rounded-2xl">
+                <p class="text-xs md:text-sm font-semibold text-slate-dark leading-relaxed flex items-center flex-wrap gap-2">
+                  <span class="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded">夏季流程</span>
+                  現場選購 ➔ <span class="text-crimson font-black">付現金 💰</span> ➔ 當場帶回家 🎉
+                </p>
+                <p class="text-[11px] text-slate/60 mt-2 font-medium"><i class="fa-solid fa-shirt mr-1 text-orange-400"></i>包含品項：夏季上衣、夏季褲子 / 裙子</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 Card -->
+        <div class="glass-card rounded-2xl p-6 md:p-8 border border-gold/15 bg-white/90 shadow-md transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <span class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 font-serif font-black text-sm">Q2</span>
+            <div class="space-y-3 w-full">
+              <h3 class="font-serif font-bold text-base md:text-lg text-slate-dark">冬季制服也是現場買嗎？</h3>
+              <div class="p-4 bg-blue-50/50 border border-blue-100/50 rounded-2xl space-y-3">
+                <p class="text-xs md:text-sm font-bold text-blue-800 flex items-center gap-1.5">
+                  <span class="bg-blue-100 text-blue-700 text-[10px] font-bold px-2 py-0.5 rounded">冬季流程</span>
+                  不是喔！冬季制服採【預購制】📝
+                </p>
+                <ul class="text-xs text-slate-dark space-y-1.5 pl-1 font-medium leading-relaxed border-t border-blue-100/50 pt-2.5">
+                  <li class="flex items-center gap-2"><i class="fa-regular fa-file-lines text-blue-400"></i> 現場只需要<strong>填寫預購單</strong></li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-dollar-sign text-blue-400"></i> 費用之後會<strong>跟三聯單一起收</strong>（不用當天付錢）</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-truck text-blue-400"></i> 預計 <strong class="text-crimson">10/30 前</strong>發放</li>
+                </ul>
+                <p class="text-[11px] text-slate/60 font-medium"><i class="fa-solid fa-shirt mr-1 text-blue-400"></i>包含品項：冬季外套、冬季長褲 / 裙子</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 Card -->
+        <div class="glass-card rounded-2xl p-6 md:p-8 border border-gold/15 bg-white/90 shadow-md transition-all duration-300">
+          <div class="flex items-start gap-4">
+            <span class="w-8 h-8 rounded-full bg-crimson/10 text-crimson flex items-center justify-center shrink-0 font-serif font-black text-sm">Q3</span>
+            <div class="space-y-3 w-full">
+              <h3 class="font-serif font-bold text-base md:text-lg text-slate-dark">那我當天要準備多少錢？</h3>
+              <div class="p-4 bg-crimson/5 border border-crimson/10 rounded-2xl">
+                <p class="text-xs md:text-sm font-bold text-slate-dark leading-relaxed">
+                  家長當天只需要準備<span class="text-crimson text-sm font-black underline">夏季制服</span>的現金費用即可！
+                </p>
+                <p class="text-xs text-slate/75 mt-2 font-medium">
+                  冬季制服的錢，之後再跟學校註冊三聯單一起繳就好囉～ 😊
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION: LATEST ANNOUNCEMENTS (最新消息) -->
   <section id="news" class="py-24 px-6 md:px-12 bg-white relative">
     <div class="max-w-6xl mx-auto">
       
@@ -543,8 +682,8 @@
             </div>
             <div class="text-sm">
               <span class="block font-serif font-bold text-slate-dark text-base">生教組諮詢信箱</span>
-              <a href="mailto:C2@apps.kdps.tp.edu.tw" class="text-crimson hover:underline font-black text-base mt-0.5 block">
-                C2@apps.kdps.tp.edu.tw
+              <a href="/cdn-cgi/l/email-protection#7635443617060605581d12060558020658131203580201" class="text-crimson hover:underline font-black text-base mt-0.5 block">
+                <span class="__cf_email__" data-cfemail="094a3b496879797a27626d797a277d79276c6d7c277d7e">[email&#160;protected]</span>
               </a>
             </div>
           </div>
@@ -609,7 +748,7 @@
           <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-gold text-xs w-4"></i> 11257 臺北市北投區中央北路四段581號</p>
           <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-gold text-xs w-4"></i> (02)2891-2847 分機 824 (生教組長)</p>
           <p class="flex items-center gap-2"><i class="fa-solid fa-print text-gold text-xs w-4"></i> 傳真專線：(02) 2895-2910</p>
-          <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gold text-xs w-4"></i> C2@apps.kdps.tp.edu.tw</p>
+          <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gold text-xs w-4"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2b68196b4a5b5b5805404f5b58055f5b054e4f5e055f5c">[email&#160;protected]</a></p>
         </div>
 
       </div>
@@ -630,7 +769,7 @@
 
 
   <!-- JAVASCRIPT LOGIC -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Header Scroll Styling
     window.addEventListener('scroll', () => {
       const header = document.getElementById('sticky-header');
@@ -703,5 +842,5 @@
       observer.observe(section);
     });
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a273256b2985842d',t:'MTc4NjA3MjgzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
