@@ -93,50 +93,31 @@
 
   <!-- 
     ★ FLOATING SIDEBAR NAVIGATION WIDGET (Sleek Anchor Menu, matching Arena.ai's elegant blog sidebar) ★
-    在螢幕寬度足夠時（xl 及以上），於網頁右側浮現此導覽列。
-    滑鼠放到項目上時，文字會從透明往左優雅滑出，橫線變為品牌靛藍色並拉長，非常具有科技美感！
+    已針對「最新消息」移至最上方的結構，重新對稱編排了垂直導覽順序。
   -->
   <div class="fixed right-8 top-1/4 z-40 hidden xl:flex flex-col items-end gap-5 select-none pointer-events-auto">
     
-    <!-- Item: Back to Announcements / Top -->
+    <!-- Item: Latest News (Top-most) -->
+    <a href="#news" class="group flex items-center justify-end h-8 cursor-pointer">
+      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">一、最新消息公告</span>
+      <div class="h-[1px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
+      <div class="w-5 h-5 border border-slate-200 group-hover:border-brand bg-white group-hover:bg-brand rounded-md flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
+        <i class="fa-solid fa-newspaper text-[9px] text-slate-400 group-hover:text-white transition-colors"></i>
+      </div>
+    </a>
+
+    <!-- Item: Announcement Detail -->
     <a href="#hero" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">回到公告最頂端</span>
+      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">二、開學制服日程看板</span>
       <div class="h-[1px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
       <div class="w-5 h-5 border border-slate-200 group-hover:border-brand bg-white group-hover:bg-brand rounded-md flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <i class="fa-solid fa-arrow-up text-[9px] text-slate-400 group-hover:text-white transition-colors"></i>
-      </div>
-    </a>
-
-    <!-- Item: Schedule -->
-    <a href="#schedule" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">一、現場販售日程</span>
-      <div class="h-[1px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
-      <div class="w-5 h-5 border border-slate-200 group-hover:border-brand bg-white group-hover:bg-brand rounded-md flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <div class="w-1.5 h-1.5 bg-slate-300 group-hover:bg-white rounded-full transition-colors"></div>
-      </div>
-    </a>
-
-    <!-- Item: Method -->
-    <a href="#method" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">二、夏季與冬季購買項目</span>
-      <div class="h-[1px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
-      <div class="w-5 h-5 border border-slate-200 group-hover:border-brand bg-white group-hover:bg-brand rounded-md flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <div class="w-1.5 h-1.5 bg-slate-300 group-hover:bg-white rounded-full transition-colors"></div>
-      </div>
-    </a>
-
-    <!-- Item: Reorder -->
-    <a href="#reorder" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">三、學期中補購流程</span>
-      <div class="h-[1px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
-      <div class="w-5 h-5 border border-slate-200 group-hover:border-brand bg-white group-hover:bg-brand rounded-md flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <div class="w-1.5 h-1.5 bg-slate-300 group-hover:bg-white rounded-full transition-colors"></div>
+        <i class="fa-solid fa-shirt text-[9px] text-slate-400 group-hover:text-white transition-colors"></i>
       </div>
     </a>
 
     <!-- Item: FAQ -->
     <a href="#faq" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">四、常見問題 FAQ</span>
+      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">三、常見問題 FAQ</span>
       <div class="h-[1px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
       <div class="w-5 h-5 border border-slate-200 group-hover:border-brand bg-white group-hover:bg-brand rounded-md flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
         <div class="w-1.5 h-1.5 bg-slate-300 group-hover:bg-white rounded-full transition-colors"></div>
@@ -145,7 +126,7 @@
 
     <!-- Item: Contact -->
     <a href="#contact" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">五、聯絡與諮詢生教組</span>
+      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">四、聯絡與諮詢生教組</span>
       <div class="h-[1px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
       <div class="w-5 h-5 border border-slate-200 group-hover:border-brand bg-white group-hover:bg-brand rounded-md flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
         <i class="fa-solid fa-envelope text-[9px] text-slate-400 group-hover:text-white transition-colors"></i>
@@ -154,27 +135,26 @@
 
   </div>
 
-  <!-- Header / Navigation (Frosted Glass Sticky Navbar, identical to Arena.ai Blog Header) -->
+  <!-- Header & Sticky Navbar -->
   <header id="sticky-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-3 px-6 md:px-12 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-slate-100">
     <!-- Brand Logo Group (No spaces) -->
     <a href="#" class="flex items-center gap-2.5 group">
+      <!-- Standard CSS styles are directly injected below to guarantee restriction (Line 161) -->
       <div id="logo-container-wrapper" class="relative bg-white rounded-full shadow-sm border border-slate-200 flex items-center justify-center overflow-hidden transition-transform duration-500 group-hover:scale-105 shrink-0" style="width: 28px; height: 28px;">
-  <img src="assets/logo.png" alt="關渡國小校徽" class="w-full h-full object-contain">
-   </div>
+        <img src="assets/logo.png" alt="關渡國小校徽" class="w-full h-full object-contain">
+      </div>
       <div class="title-text-flex-container flex flex-col">
         <span class="font-serif font-bold tracking-wider text-crimson transition-colors duration-300" id="header-title">臺北市關渡國小學務處生教組</span>
         <span class="font-display text-[9px] md:text-[10px] tracking-widest text-gold-dark transition-colors duration-300" id="header-subtitle">GUANDU ELEMENTARY SCHOOL · STUDENT AFFAIRS</span>
       </div>
     </a>
 
-    <!-- Desktop Navigation Links -->
+    <!-- Desktop Navigation Links (Swapped order: 最新消息 first) -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-      <a href="#hero" class="hover:text-brand transition-colors">公告首頁</a>
-      <a href="#schedule" class="hover:text-brand transition-colors">購買時程</a>
-      <a href="#method" class="hover:text-brand transition-colors">購買方式</a>
-      <a href="#reorder" class="hover:text-brand transition-colors">平日補購</a>
-      <a href="#faq" class="hover:text-brand transition-colors">常見問答</a>
       <a href="#news" class="hover:text-brand transition-colors">最新消息</a>
+      <a href="#hero" class="hover:text-brand transition-colors">制服日程看板</a>
+      <a href="#faq" class="hover:text-brand transition-colors">常見問答</a>
+      <a href="#contact" class="hover:text-brand transition-colors">聯絡生教組</a>
     </nav>
 
     <!-- Header Actions -->
@@ -193,23 +173,119 @@
 
   <!-- Mobile Dropdown Menu -->
   <div id="mobile-menu" class="fixed inset-0 bg-white/98 backdrop-blur-md z-40 flex flex-col justify-center items-center gap-6 py-20 px-8 transition-all duration-300 ease-in-out transform translate-x-full md:hidden">
-    <a href="#hero" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">公告首頁</a>
-    <a href="#schedule" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">購買時程</a>
-    <a href="#method" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">購買方式</a>
-    <a href="#reorder" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">平日補購</a>
-    <a href="#faq" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">常見問答</a>
     <a href="#news" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">最新消息</a>
+    <a href="#hero" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">制服日程看板</a>
+    <a href="#faq" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">常見問答</a>
+    <a href="#contact" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">聯絡生教組</a>
     <div class="h-px w-20 bg-slate-100 my-2"></div>
     <a href="http://www.kdps.tp.edu.tw/" target="_blank" class="text-sm font-bold px-5 py-2.5 bg-slate-50 text-slate-700 border border-slate-200 rounded-lg">學校官網</a>
   </div>
 
 
-  <!-- MAIN ARTICLE CONTAINER -->
-  <main id="hero-content" class="pt-24 pb-20 min-h-screen bg-white">
+  <!-- 🟢 SECTION 1: LATEST ANNOUNCEMENTS (最新消息) -->
+  <!-- Swapped to be the VERY FIRST section at the top of the webpage below the header -->
+  <section id="news" class="pt-32 pb-20 px-6 md:px-12 bg-slate-50 relative scroll-mt-20">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-16 fade-in-section">
+        <span class="font-display text-xs md:text-sm tracking-[0.3em] text-brand font-semibold uppercase block mb-2">LATEST ANNOUNCEMENTS</span>
+        <h2 class="font-serif font-black text-2xl md:text-4xl text-slate-900 tracking-wider inline-block relative pb-3">
+          最新消息
+          <span class="absolute bottom-0 left-0 w-1/3 h-1 bg-brand rounded-full"></span>
+          <span class="absolute bottom-0 left-1/3 w-2/3 h-0.5 bg-slate-200 rounded-full"></span>
+        </h2>
+        <div class="max-w-xl mx-auto mt-4 text-slate-500 text-sm md:text-base font-medium">
+          學務處生教組發布之最新服裝規定與制服販售即時消息公告。
+        </div>
+      </div>
+
+      <!-- News Cards Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in-section">
+        
+        <!-- Column 1: 新生專區 -->
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 border-2 border-brand/20 bg-white shadow-md">
+          <div class="relative h-44 overflow-hidden bg-brand-light/50 flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-tr from-crimson/5 to-transparent z-10"></div>
+            <i class="fa-solid fa-shirt text-6xl text-brand/30 absolute z-0 animate-pulse"></i>
+            <div class="absolute top-4 left-4 z-20 bg-crimson text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase animate-bounce">
+              新生專區
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center text-xs text-slate-400 gap-2 font-semibold">
+                <i class="fa-regular fa-calendar-days"></i>
+                <time datetime="2026-08-06">2026 年 8 月 6 日</time>
+              </div>
+              <h3 class="font-bold text-base md:text-lg text-slate-900 leading-snug hover:text-brand transition-colors duration-300 line-clamp-2">
+                【重要】115 學年度新生制服販售日程公告：8/22 及 9/3 於大門口現場販售
+              </h3>
+              <p class="text-xs text-slate-500 line-clamp-4 leading-relaxed">
+                臺北市關渡國小學務處生教組公告：本年度新生入學制服於 8/22(四) 早上9點至11點，以及 9/3(二) 早上7:30至9點，於**關渡國小大門口**現場販售。這兩日開放現場現金購買夏季制服，冬季制服請填寫預購單...
+              </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 mt-4">
+              <a href="#hero" class="text-xs font-bold text-brand hover:text-brand-dark flex items-center gap-1">
+                <span>詳細時程與小提醒</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Column 2: 學生制服穿著新規定 -->
+        <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 border-2 border-brand/20 bg-white shadow-md">
+          <div class="relative h-44 overflow-hidden bg-brand-light/50 flex items-center justify-center">
+            <div class="absolute inset-0 bg-gradient-to-tr from-gold/5 to-transparent z-10"></div>
+            <i class="fa-solid fa-user-check text-6xl text-brand/30 absolute z-0"></i>
+            <div class="absolute top-4 left-4 z-20 bg-brand text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">
+              服裝規定
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center text-xs text-slate-400 gap-2 font-semibold">
+                <i class="fa-regular fa-calendar-days"></i>
+                <time datetime="2026-08-07">2026 年 8 月 7 日</time>
+              </div>
+              <h3 class="font-bold text-base md:text-lg text-slate-900 leading-snug hover:text-brand transition-colors duration-300 line-clamp-2">
+                【重要公告】學生制服改在每週星期二穿著
+              </h3>
+              <p class="text-xs text-slate-500 line-clamp-4 leading-relaxed">
+                關渡國小學務處生教組重要公告：自 115 學年度第一學期起，為落實校園服裝儀容整潔，增進生活教育常規之培養，<span class="text-crimson font-bold">全校學生制服改在每週星期二穿著</span>。請各位家長協助引導孩子於週二穿著整齊制服入校。
+              </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 mt-4">
+              <a href="#faq" class="text-xs font-bold text-brand hover:text-brand-dark flex items-center gap-1">
+                <span>配合事項說明</span>
+                <i class="fa-solid fa-chevron-right text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Column 3: 校園活動 (Cleared & kept strictly blank) -->
+        <div class="rounded-2xl border-2 border-dashed border-slate-200/80 flex flex-col items-center justify-center p-6 bg-white/40 min-h-[300px]">
+          <div class="text-center opacity-30 space-y-2">
+            <i class="fa-solid fa-calendar-check text-4xl text-slate-400"></i>
+            <h4 class="font-bold text-xs text-slate-600">校園活動</h4>
+            <p class="text-[9px] font-semibold tracking-wider font-mono">（欄位保留空白）</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 🟢 SECTION 2: HERO ANNOUNCEMENT BOARD (制服日程看板) -->
+  <!-- Swapped to be the second section, flowing beautifully as the main article of the portal -->
+  <main id="hero" class="py-20 bg-white scroll-mt-20">
     <article class="max-w-4xl mx-auto px-6">
       
       <!-- Blog Metadata & Breadcrumb -->
-      <div class="pt-6 pb-8 space-y-4">
+      <div class="pb-8 space-y-4">
         <div class="flex items-center gap-2 text-xs font-bold tracking-widest text-brand uppercase">
           <span>學務生教公告</span>
           <span class="text-slate-300">•</span>
@@ -237,12 +313,6 @@
               <p class="text-xs text-slate-500 mt-1">發布於 2026 年 8 月 7 日 · 閱讀時間約 3 分鐘</p>
             </div>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-crimson-light text-crimson text-xs font-bold">
-              <span class="w-1.5 h-1.5 rounded-full bg-crimson animate-ping"></span>
-              最新消息:新生注意事項
-            </span>
-          </div>
         </div>
       </div>
 
@@ -264,7 +334,7 @@
           </p>
         </div>
 
-        <!-- 📅 SECTION: SCHEDULE -->
+        <!-- 📅 SUB-SECTION: SCHEDULE (購買時程) -->
         <div id="schedule" class="scroll-mt-24 space-y-6 pt-4">
           <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
             <i class="fa-solid fa-calendar-days text-brand"></i>
@@ -279,7 +349,7 @@
                   <span class="inline-flex items-center px-2.5 py-0.5 rounded-md bg-crimson-light text-crimson text-xs font-bold uppercase">第一階段</span>
                   <span class="text-xs font-semibold text-slate-500">新生始業日</span>
                 </div>
-                <h3 class="font-bold text-2xl text-slate-900">8 月 22 日 <span class="text-sm font-medium text-slate-500">(四)</span></h3>
+                <h3 class="font-bold text-2xl text-slate-900">8 / 22 日</h3>
                 <p class="text-sm font-semibold text-slate-700 flex items-center gap-1.5 pt-1">
                   <i class="fa-regular fa-clock text-slate-400"></i>
                   早上 09:00 ~ 11:00
@@ -298,7 +368,7 @@
                   <span class="inline-flex items-center px-2.5 py-0.5 rounded-md bg-slate-800 text-slate-100 text-xs font-bold uppercase">第二階段</span>
                   <span class="text-xs font-semibold text-slate-500">開學週期間</span>
                 </div>
-                <h3 class="font-bold text-2xl text-slate-900">9 月 03 日 <span class="text-sm font-medium text-slate-500">(二)</span></h3>
+                <h3 class="font-bold text-2xl text-slate-900">9 / 03 日</h3>
                 <p class="text-sm font-semibold text-slate-700 flex items-center gap-1.5 pt-1">
                   <i class="fa-regular fa-clock text-slate-400"></i>
                   早上 07:30 ~ 09:00
@@ -312,7 +382,7 @@
           </div>
         </div>
 
-        <!-- 👕 SECTION: METHOD -->
+        <!-- 👕 SUB-SECTION: METHOD (購買方式) -->
         <div id="method" class="scroll-mt-24 space-y-6 pt-4">
           <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
             <i class="fa-solid fa-vest text-brand"></i>
@@ -357,14 +427,14 @@
           </div>
         </div>
 
-        <!-- 🔄 SECTION: REORDER -->
+        <!-- 🔄 SUB-SECTION: REORDER (平日補購) -->
         <div id="reorder" class="scroll-mt-24 space-y-6 pt-4">
           <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
             <i class="fa-solid fa-rotate-left text-brand"></i>
             <span>三、🔄 平日與學期中補購制服流程</span>
           </h2>
           
-          <p class="text-slate-600 text-sm md:text-base">
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed">
             若家長錯過以上兩個販售日，或是學期中孩子長高有補購服裝需求，我們已協調廠商利用電話補購，流程與配合方式如下：
           </p>
 
@@ -427,7 +497,7 @@
           </div>
         </div>
 
-        <!-- 🤔 SECTION: FAQ -->
+        <!-- 🤔 SUB-SECTION: FAQ (常見問答) -->
         <div id="faq" class="scroll-mt-24 space-y-6 pt-4">
           <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
             <i class="fa-solid fa-circle-question text-brand"></i>
@@ -496,73 +566,13 @@
 
       </div>
 
-      <!-- 🟢 SECTION: NEWS CARD COLS -->
-      <div id="news" class="scroll-mt-24 pt-16 mt-16 border-t border-slate-100 space-y-8">
-        <div>
-          <h2 class="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
-            <i class="fa-solid fa-newspaper text-brand"></i>
-            <span>關渡最新公告消息</span>
-          </h2>
-          <p class="text-xs text-slate-500 mt-1">學務處生教組發布之即時公告清單</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="border border-slate-200/80 rounded-2xl overflow-hidden bg-white hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col h-full justify-between">
-            <div class="p-5 space-y-3">
-              <div class="flex items-center text-xs text-slate-400 gap-2 font-semibold">
-                <i class="fa-regular fa-clock"></i>
-                <time datetime="2026-08-06">2026 年 8 月 6 日</time>
-              </div>
-              <h3 class="font-bold text-base text-slate-900 leading-snug hover:text-brand transition-colors line-clamp-2">
-                【重要】115學年度新生開學制服販售日程公告
-              </h3>
-              <p class="text-xs text-slate-500 line-clamp-3 leading-relaxed">
-                本年度新生入學制服於 8/22(四) 及 9/3(二) 於大門口現場販售。這兩日開放現場現金購買夏季制服，冬季制服填單預購...
-              </p>
-            </div>
-            <div class="p-5 border-t border-slate-100 pt-3">
-              <a href="#hero" class="text-xs font-bold text-brand hover:text-brand-dark flex items-center gap-1">
-                <span>閱讀此公告</span>
-                <i class="fa-solid fa-chevron-right text-[8px]"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="border border-slate-200/80 rounded-2xl overflow-hidden bg-white hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col h-full justify-between">
-            <div class="p-5 space-y-3">
-              <div class="flex items-center text-xs text-slate-400 gap-2 font-semibold">
-                <i class="fa-regular fa-clock"></i>
-                <time datetime="2026-08-07">2026 年 8 月 7 日</time>
-              </div>
-              <h3 class="font-bold text-base text-slate-900 leading-snug hover:text-brand transition-colors line-clamp-2">
-                【重要公告】學生制服改在每週星期二穿著
-              </h3>
-              <p class="text-xs text-slate-500 line-clamp-3 leading-relaxed">
-                自115學年度起，全校學生制服改在每週星期二統一穿著，敬請家長引導並協助配合生活常規整潔教育...
-              </p>
-            </div>
-            <div class="p-5 border-t border-slate-100 pt-3">
-              <a href="#hero" class="text-xs font-bold text-brand hover:text-brand-dark flex items-center gap-1">
-                <span>閱讀此公告</span>
-                <i class="fa-solid fa-chevron-right text-[8px]"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="border-2 border-dashed border-slate-200 rounded-2xl flex flex-col items-center justify-center p-6 bg-slate-50/50 min-h-[180px]">
-            <div class="text-center opacity-30 space-y-1.5">
-              <i class="fa-solid fa-calendar-check text-2xl text-slate-400"></i>
-              <h4 class="font-bold text-xs text-slate-600">校園活動</h4>
-              <p class="text-[9px] font-semibold tracking-wider font-mono">（欄位保留空白）</p>
-            </div>
-          </div>
-        </div>
+      <!-- Sizing & Environment Reminder Footer under the article -->
+      <div class="text-xs text-slate-400 pt-8 border-t border-slate-100 flex flex-wrap justify-between gap-4 mt-12">
+        <span>📍 本網頁由臺北市北投區關渡國民小學學務處製發，資訊皆經嚴格核對。</span>
+        <span>現場備有各尺寸樣衣，建議家長自備環保袋。</span>
       </div>
 
-      <!-- 📧 SECTION: CONTACT -->
+      <!-- 📧 SECTION: CONTACT (聯絡與諮詢 Box) -->
       <div id="contact" class="scroll-mt-24 mt-16 p-8 md:p-10 rounded-2xl border border-slate-100 bg-slate-50 text-center space-y-6">
         <div class="max-w-xl mx-auto space-y-2">
           <span class="text-xs font-bold text-brand tracking-widest uppercase">學務諮詢管道</span>
@@ -586,7 +596,7 @@
           <div class="p-4 bg-white border border-slate-200/80 rounded-xl space-y-1">
             <span class="text-slate-400 text-sm"><i class="fa-solid fa-envelope text-brand"></i> 生教組信箱</span>
             <p class="text-xs font-bold text-slate-800 leading-snug pt-0.5">
-              <a href="/cdn-cgi/l/email-protection#1e5d2c5e7f6e6e6d30757a6e6d306a6e307b7a6b306a69" class="hover:text-brand transition-colors font-black"><span class="__cf_email__" data-cfemail="f4b7c6b495848487da9f908487da8084da919081da8083">[email&#160;protected]</span></a>
+              <a href="mailto:C2@apps.kdps.tp.edu.tw" class="hover:text-brand transition-colors font-black">C2@apps.kdps.tp.edu.tw</a>
             </p>
           </div>
         </div>
@@ -623,9 +633,9 @@
           </div>
         </div>
         <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-slate-400">
-          <a href="#hero" class="hover:text-slate-200 transition-colors">首頁</a>
-          <a href="#faq" class="hover:text-slate-200 transition-colors">常見問答</a>
           <a href="#news" class="hover:text-slate-200 transition-colors">最新消息</a>
+          <a href="#hero" class="hover:text-slate-200 transition-colors">日程看板</a>
+          <a href="#faq" class="hover:text-slate-200 transition-colors">常見問答</a>
           <a href="#contact" class="hover:text-slate-200 transition-colors">聯絡諮詢</a>
         </div>
       </div>
@@ -633,7 +643,7 @@
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[10px] text-slate-500">
         <div class="space-y-1">
           <p>© 2026 臺北市立關渡國民小學學務處生教組 版權所有. All rights reserved.</p>
-          <p>聯絡窗口：生教組長 (02)2891-2847 分機 824 | 傳真：(02)2895-2910 | 郵箱：<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="75364735140505065b1e1105065b01055b1011005b0102">[email&#160;protected]</a></p>
+          <p>聯絡窗口：生教組長 (02)2891-2847 分機 824 | 傳真：(02)2895-2910 | 郵箱：C2@apps.kdps.tp.edu.tw</p>
         </div>
         <div class="flex items-center gap-3 shrink-0">
           <a href="#" class="hover:underline">網頁隱私權宣告</a>
@@ -647,7 +657,7 @@
 
 
   <!-- JAVASCRIPT LOGIC -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Header Scroll Progress and Background Shadow Toggle
     window.addEventListener('scroll', () => {
       const header = document.getElementById('sticky-header');
@@ -708,5 +718,5 @@
       observer.observe(section);
     });
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2738bf63e874a84',t:'MTc4NjA3NzAzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
