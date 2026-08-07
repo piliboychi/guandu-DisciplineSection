@@ -338,31 +338,55 @@
 
           </div>
 
-          <!-- Polished Reminders block -->
-          <div class="pt-4 border-t border-gold/20 space-y-2">
-            <h4 class="text-xs font-bold text-slate-dark flex items-center gap-1.5">
-              <i class="fa-solid fa-circle-exclamation text-crimson"></i>
-              生教組貼心小提醒：
-            </h4>
-            <div class="font-bold text-slate-dark bg-crimson/5 p-4 rounded-2xl border-l-4 border-crimson space-y-3 shadow-inner">
-              <div class="flex items-start gap-2.5">
-                <span class="bg-crimson text-white text-[10px] font-bold px-2 py-0.5 rounded mt-0.5 shrink-0">夏季制服</span>
-                <p class="text-xs md:text-sm font-semibold text-slate-dark leading-relaxed">
-                  這兩日開放現場現金購買夏季制服。
-                </p>
+          <!-- 👕 販售項目與購買方式 (Highly detailed user contents) -->
+          <div class="pt-4 border-t border-gold/20 space-y-4">
+            
+            <h3 class="text-sm font-bold text-slate-dark flex items-center gap-1.5">
+              <i class="fa-solid fa-vest text-crimson"></i>
+              <span>👕 販售項目與購買方式</span>
+            </h3>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <!-- Summer Uniform Card -->
+              <div class="p-4 rounded-2xl bg-orange-50/40 border border-orange-200/40 space-y-2">
+                <h4 class="text-xs font-bold text-orange-800 flex items-center gap-1">
+                  <span>☀️ 夏季制服（現場販售）</span>
+                </h4>
+                <ul class="text-xs text-slate-dark space-y-1.5 pl-1 font-medium leading-relaxed">
+                  <li class="flex items-start gap-1"><span class="text-orange-400 mt-0.5">•</span> <strong>品項：</strong>上衣、褲子 / 裙子</li>
+                  <li class="flex items-start gap-1"><span class="text-orange-400 mt-0.5">•</span> <strong>付款方式：</strong><strong class="text-crimson">現金購買</strong>，現場取貨 💰</li>
+                  <li class="flex items-start gap-1"><span class="text-orange-400 mt-0.5">•</span> <strong>建議：</strong>請先試穿確認尺寸</li>
+                </ul>
               </div>
-              <div class="h-px bg-gold/10"></div>
-              <div class="flex items-start gap-2.5">
-                <span class="bg-slate-dark text-gold-light text-[10px] font-bold px-2 py-0.5 rounded mt-0.5 shrink-0">冬季制服</span>
-                <p class="text-xs md:text-sm font-semibold text-slate-dark leading-relaxed">
-                  採現場填單預購，預計 <span class="text-crimson">10 月 30 日前</span> 交貨，費用將由學校註冊三聯單代收。
-                </p>
+
+              <!-- Winter Uniform Card -->
+              <div class="p-4 rounded-2xl bg-blue-50/40 border border-blue-200/40 space-y-2">
+                <h4 class="text-xs font-bold text-blue-800 flex items-center gap-1">
+                  <span>❄️ 冬季制服（預購方式）</span>
+                </h4>
+                <ul class="text-xs text-slate-dark space-y-1.5 pl-1 font-medium leading-relaxed">
+                  <li class="flex items-start gap-1"><span class="text-blue-400 mt-0.5">•</span> <strong>品項：</strong>外套、長褲 / 裙子</li>
+                  <li class="flex items-start gap-1"><span class="text-blue-400 mt-0.5">•</span> <strong>購買方式：</strong><strong class="text-blue-700">填寫預購單</strong> 📝</li>
+                  <li class="flex items-start gap-1"><span class="text-blue-400 mt-0.5">•</span> <strong>預計交貨日：</strong><strong class="text-blue-700">10 月 30 日前</strong></li>
+                  <li class="flex items-start gap-1"><span class="text-blue-400 mt-0.5">•</span> <strong>付款方式：</strong>費用將與<strong class="text-blue-700">三聯單一起收取</strong></li>
+                </ul>
               </div>
             </div>
-            <ul class="list-disc list-inside text-[11px] text-slate/70 space-y-1 pl-1 leading-relaxed pt-1">
-              <li class="text-slate-dark font-medium"><span class="text-crimson">現場備有各尺寸樣衣供套量；為響應關渡綠色校園生活，建議自備環保提袋。</span></li>
-              <li>若尺寸購買後不合，可在全新未洗滌、未剪標狀態下，於開學首週攜帶制服至學務處生教組更換。</li>
-            </ul>
+
+            <!-- Warm Reminder Box (Required text) -->
+            <div class="p-3.5 bg-crimson/5 rounded-2xl border-l-4 border-crimson shadow-inner">
+              <p class="text-xs md:text-sm font-black text-crimson leading-relaxed flex items-start gap-2">
+                <i class="fa-solid fa-circle-exclamation text-sm mt-0.5 animate-pulse shrink-0"></i>
+                <span>💡 溫馨提醒：冬季制服採預購制，當天不販售現貨，請家長留意！</span>
+              </p>
+            </div>
+
+            <!-- Card Sub-Footer Sizing & Environment -->
+            <div class="text-[11px] text-slate/60 flex flex-wrap justify-between items-center gap-2 pt-2 border-t border-gold/10">
+              <span><i class="fa-solid fa-shirt mr-1"></i>現場備有各尺寸樣衣供套量；為響應關渡綠色校園生活，建議自備環保提袋。</span>
+              <span>有疑問請電洽生教組：(02)2891-2847 #824</span>
+            </div>
+
           </div>
         </div>
       </div>
@@ -425,7 +449,7 @@
           </div>
         </article>
 
-        <!-- Column 2: 學生制服穿著新規定 (Added as requested: 學生制服改在每週星期二穿著) -->
+        <!-- Column 2: 學生制服穿著新規定 -->
         <article class="glass-card rounded-2xl overflow-hidden flex flex-col h-full transition-all duration-300 border-2 border-gold/30 shadow-md">
           <div class="relative h-44 overflow-hidden bg-gold-pale flex items-center justify-center">
             <div class="absolute inset-0 bg-gradient-to-tr from-gold/5 to-transparent z-10"></div>
@@ -454,7 +478,7 @@
           </div>
         </article>
 
-        <!-- Column 3: 校園活動 (Cleared & kept strictly blank as requested) -->
+        <!-- Column 3: 校園活動 (Cleared & kept strictly blank) -->
         <div class="rounded-2xl border-2 border-dashed border-gold/20 flex flex-col items-center justify-center p-8 min-h-[300px] bg-cream/10">
           <div class="text-center space-y-2 opacity-30">
             <i class="fa-solid fa-calendar-check text-4xl text-gold-dark"></i>
@@ -593,7 +617,7 @@
       <!-- Copyright -->
       <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-white/40">
         <div>
-          © 2026 臺北市立關渡國民小學學務處生教組 版權所有. Guandu Elementary School. All rights reserved.
+          © 2026 臺北市立關渡國民小學學務處生教組 版權所有. Guandu School. All rights reserved.
         </div>
         <div class="flex items-center gap-4">
           <a href="#" class="hover:underline">網頁隱私權宣告</a>
