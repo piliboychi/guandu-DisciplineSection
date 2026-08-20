@@ -196,7 +196,7 @@
   <!-- FLOATING SIDEBAR NAVIGATION WIDGET -->
   <div class="fixed right-6 top-1/4 z-40 hidden xl:flex flex-col items-end gap-5 select-none pointer-events-auto">
     <a href="#news" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">一、最新消息公告</span>
+      <span class="text-xs font-bold text-slate-500 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">一、最新消息公告</span>
       <div class="h-[2px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
       <div class="w-4 h-4 border border-slate-400 group-hover:border-brand bg-white group-hover:bg-brand flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
         <i class="fa-solid fa-newspaper text-[8px] text-slate-400 group-hover:text-white transition-colors"></i>
@@ -211,7 +211,7 @@
     </a>
     <a href="#documents" class="group flex items-center justify-end h-8 cursor-pointer">
       <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">三、常用表單與規定</span>
-      <div class="h-[2px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
+      <div class="h-[2px] w-6 group-hover:w-12 bg-slate-300 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
       <div class="w-4 h-4 border border-slate-400 group-hover:border-brand bg-white group-hover:bg-brand flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
         <i class="fa-solid fa-file-arrow-down text-[8px] text-slate-400 group-hover:text-white transition-colors"></i>
       </div>
@@ -372,10 +372,10 @@
         </button>
       </div>
 
-      <!-- Main Carousel Row (Arrows made relative & visible on mobile!) -->
+      <!-- Main Carousel Row -->
       <div class="max-w-5xl mx-auto px-2 md:px-12 flex items-center select-none relative w-full">
         
-        <!-- Prev Arrow (Always visible & absolute) -->
+        <!-- Prev Arrow -->
         <button onclick="prevSlide()" class="absolute left-1 sm:left-4 md:left-6 z-20 flex w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-md focus:outline-none" title="上一頁">
           <i class="fa-solid fa-chevron-left text-xs"></i>
         </button>
@@ -444,10 +444,25 @@
                 <p class="text-xs sm:text-sm text-slate-500 font-medium">
                   夏季制服開放現場套量、試穿並現金選購。為落實關渡綠色校園，建議攜帶環保提袋。
                 </p>
+                <!-- Content Detail (Updated with Summer Prices: $300 & $210) -->
                 <div class="p-4 rounded border border-slate-200 space-y-3 shadow-sm text-xs sm:text-sm bg-white">
                   <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
-                    <span class="text-slate-400 font-bold">👕 販售品項</span>
-                    <span class="col-span-2 font-bold text-slate-900">短袖上衣、短褲</span>
+                    <span class="text-slate-400 font-bold">👕 販售品項 & 價格</span>
+                    <div class="col-span-2 space-y-1.5">
+                      <div class="flex justify-between font-bold text-slate-900">
+                        <span>運動短衫（短袖上衣）</span>
+                        <span class="text-brand font-black">NT$ 300</span>
+                      </div>
+                      <div class="flex justify-between font-bold text-slate-900">
+                        <span>運動短褲（短褲）</span>
+                        <span class="text-brand font-black">NT$ 210</span>
+                      </div>
+                      <div class="h-px bg-slate-150 my-1"></div>
+                      <div class="flex justify-between font-black text-crimson text-[13px]">
+                        <span>夏季一套小計</span>
+                        <span>NT$ 510</span>
+                      </div>
+                    </div>
                   </div>
                   <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
                     <span class="text-slate-400 font-bold">💰 付款取貨</span>
@@ -482,10 +497,25 @@
                 <p class="text-xs sm:text-sm text-slate-500 font-medium">
                   冬季服裝在販售當天【不提供現貨販售】，採現場登記尺寸填預購單，後續併入三聯單繳費。
                 </p>
+                <!-- Content Detail (Updated with Winter Prices: $340 & $300) -->
                 <div class="p-4 rounded border border-slate-200 space-y-3 shadow-sm text-xs sm:text-sm bg-white">
                   <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
-                    <span class="text-slate-400 font-bold">👕 販售品項</span>
-                    <span class="col-span-2 font-bold text-slate-900">長袖上衣、長褲</span>
+                    <span class="text-slate-400 font-bold">👕 販售品項 & 價格</span>
+                    <div class="col-span-2 space-y-1.5">
+                      <div class="flex justify-between font-bold text-slate-900">
+                        <span>運動長衫（長袖上衣）</span>
+                        <span class="text-brand font-black">NT$ 340</span>
+                      </div>
+                      <div class="flex justify-between font-bold text-slate-900">
+                        <span>運動長褲（長褲）</span>
+                        <span class="text-brand font-black">NT$ 300</span>
+                      </div>
+                      <div class="h-px bg-slate-150 my-1"></div>
+                      <div class="flex justify-between font-black text-slate-700 text-[13px]">
+                        <span>冬季一套預購小計</span>
+                        <span>NT$ 640</span>
+                      </div>
+                    </div>
                   </div>
                   <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
                     <span class="text-slate-400 font-bold">📝 購買方式</span>
@@ -501,6 +531,7 @@
 
             <!-- ==================== SLIDE 4: REORDER FLOW ==================== -->
             <div class="w-full shrink-0 px-2 md:px-4 space-y-6">
+              <!-- Image Banner -->
               <div class="w-full rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-sm relative max-h-[220px] sm:max-h-[300px]">
                 <img src="assets/shipping-workflow.png" alt="平日補購物流流程" class="w-full h-full object-cover">
               </div>
@@ -571,15 +602,19 @@
                       <span>Q1：夏季制服怎麼買？</span>
                       <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform text-[10px]"></i>
                     </summary>
-                    <p class="text-slate-600 mt-2 pl-2"><strong>A</strong>：現場選購 ➔ 付現金 💰 ➔ 當場帶回家 🎉（包含：短袖上衣、短褲）</p>
+                    <!-- Updated with pricing: Summer Sets $300 + $210 = $510 -->
+                    <p class="text-slate-600 mt-2 pl-2 leading-relaxed">
+                      <strong>A</strong>：現場選購 ➔ 付現金 💰 ➔ 當場帶回家 🎉（包含：短袖上衣 <strong>$300 元</strong>、短褲 <strong>$210 元</strong>，一套共計 <strong>$510 元</strong>）。
+                    </p>
                   </details>
                   <details class="bg-white border border-slate-200 rounded-xl p-3 cursor-pointer group">
                     <summary class="font-bold text-slate-800 flex justify-between items-center">
                       <span>Q2：冬季制服也是現場買嗎？</span>
                       <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform text-[10px]"></i>
                     </summary>
+                    <!-- Updated with pricing: Winter Sets $340 + $300 = $640 -->
                     <p class="text-slate-600 mt-2 pl-2 leading-relaxed">
-                      <strong>A</strong>：不是喔！冬季制服採<strong>預購制</strong> 📝。現場僅需填寫預購單，費用之後會跟三聯單一起收取，預計 10/30 前發放（包含：長袖上衣、長褲）。
+                      <strong>A</strong>：不是喔！冬季制服採<strong>預購制</strong> 📝。現場僅需填寫預購單，費用之後會跟三聯單一起收取，預計 10/30 前發放（包含：長袖上衣 <strong>$340 元</strong>、長褲 <strong>$300 元</strong>，預購小計 <strong>$640 元</strong>）。
                     </p>
                   </details>
                   <details class="bg-white border border-slate-200 rounded-xl p-3 cursor-pointer group">
@@ -587,8 +622,9 @@
                       <span>Q3：那我當天要準備多少錢？</span>
                       <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform text-[10px]"></i>
                     </summary>
-                    <p class="text-slate-600 mt-2 pl-2">
-                      <strong>A</strong>：家長當天只需要準備<strong>夏季制服</strong>的現金費用即可！冬季制服的錢之後再跟學校三聯單一起繳就好囉～ 😊
+                    <!-- Updated with pricing -->
+                    <p class="text-slate-600 mt-2 pl-2 leading-relaxed">
+                      <strong>A</strong>：家長當天只需要準備<strong>夏季制服</strong>的現金費用 <strong>$510 元</strong>（短袖上衣 $300 + 短褲 $210）即可！冬季制服的錢（$640 元），之後再跟學校三聯單一起繳就好囉～ 😊
                     </p>
                   </details>
                 </div>
@@ -630,7 +666,7 @@
           <div class="doc-indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
         </button>
         <button onclick="goToDocSlide(2)" id="doc-indicator-2" class="doc-indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-bold text-slate-400 group-hover:text-brand transition-colors">行動載具同意書</span>
+          <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand transition-colors">行動載具同意書</span>
           <div class="doc-indicator-line w-3 group-hover:w-6"></div>
           <div class="doc-indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
         </button>
@@ -640,7 +676,7 @@
       <div class="max-w-4xl mx-auto px-2 md:px-12 flex items-center select-none relative w-full">
         
         <!-- Prev Arrow (Carousel 2) -->
-        <button onclick="activeDocIndex = (activeDocIndex - 1 + totalDocSlides) % totalDocSlides; updateDocCarousel();" class="absolute left-1 sm:left-4 z-20 flex w-8 h-8 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-md focus:outline-none" title="上一頁">
+        <button onclick="activeDocIndex = (activeDocIndex - 1 + totalDocSlides) % totalDocSlides; updateDocCarousel();" class="absolute left-1 sm:left-4 md:left-6 z-20 flex w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-md focus:outline-none" title="上一頁">
           <i class="fa-solid fa-chevron-left text-xs"></i>
         </button>
 
@@ -660,7 +696,7 @@
                   <p class="text-xs text-slate-500 leading-relaxed">學生因病假、事假或事事/喪假等原因，需請假一日以上之請假單表格。</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-bold border-t border-slate-200/60 mt-2">
-                  <a href="assets/學生請假單.doc" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
+                  <a href="assets/學生請假單.docx" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
                     <i class="fa-solid fa-file-word text-blue-500"></i>
                     <span>WORD 檔</span>
                   </a>
@@ -716,7 +752,7 @@
                     <li>(五) 學生連續曠課滿三日，由級任教師填寫「中途輟學學生通報表」，並報請相關處組辦理。</li>
                   </ul>
                   <p class="font-semibold text-crimson">八、考試期間規範：</p>
-                  <p>除重病 or 重大事故外，不得請假。請病假需有醫院「急診或住院」證明，並應於請假翌日起三日內提出證明辦理手續；請事假、公假或喪假需有相關之證明文件，經級任老師核准並於註冊組登記，方可依本校學則辦理補考。</p>
+                  <p>除重病 or 重大事故外，不得請假。請病假需有醫院「急診或住院」證明，並應於請假翌日起三日內提出證明辦理手續；請事假、公假 or 喪假需有相關之證明文件，經級任老師核准並於註冊組登記，方可依本校學則辦理補考。</p>
                   <p class="text-[10px] text-slate-400">九、如有未盡事宜，悉依相關法令及規定辦理。</p>
                 </div>
               </div>
@@ -733,7 +769,7 @@
                   <p class="text-xs text-slate-500 leading-relaxed">學生於課堂上學期間因病、因急事需臨時出校之家長接送核章申請單。</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-bold border-t border-slate-200/60 mt-2">
-                  <a href="assets/學生臨時外出申請單.doc" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
+                  <a href="assets/學生臨時外出申請單.docx" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
                     <i class="fa-solid fa-file-word text-blue-500"></i>
                     <span>WORD 檔</span>
                   </a>
@@ -767,7 +803,7 @@
                   <p class="text-xs text-slate-500 leading-relaxed">學生攜帶手機、智慧型手錶等入校之日常管理規範與家長申請同意書。</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-bold border-t border-slate-200/60 mt-2">
-                  <a href="assets/學生攜帶手機暨行動載具申請同意書.doc" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
+                  <a href="assets/學生攜帶手機暨行動載具申請同意書.docx" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
                     <i class="fa-solid fa-file-word text-blue-500"></i>
                     <span>WORD 檔</span>
                   </a>
@@ -838,7 +874,7 @@
                     <li>三、行動電話暨行動載具請黏貼班級、姓名，以利辨別。</li>
                     <li>四、不得於學校進行行動電話暨行動載具充電。</li>
                   </ul>
-                  <p><strong>叁、違反「管理規範」之處理方式：</strong></p>
+                  <p><strong>大、違反「管理規範」之處理方式：</strong></p>
                   <ul class="pl-2 space-y-1 list-none">
                     <li>一、未經申請攜帶者，第一次口頭訓誡；第二次再犯者，交由學務處暫時保管，並請家長到校領回物品。</li>
                     <li>二、已申請攜帶而違反規範者，第一次口頭訓誡。第二次再犯者，由導師暫時保管並通知家長。第三次再犯者，由學務處暫時保管且通知家長領回。</li>
@@ -853,29 +889,10 @@
         </div>
 
         <!-- Next Arrow (Carousel 2) -->
-        <button onclick="activeDocIndex = (activeDocIndex + 1) % totalDocSlides; updateDocCarousel();" class="absolute right-1 sm:right-4 z-20 flex w-8 h-8 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-sm focus:outline-none" title="下一頁">
+        <button onclick="activeDocIndex = (activeDocIndex + 1) % totalDocSlides; updateDocCarousel();" class="absolute right-1 sm:right-4 md:right-6 z-20 flex w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-md focus:outline-none" title="下一頁">
           <i class="fa-solid fa-chevron-right text-xs"></i>
         </button>
 
-      </div>
-
-      <!-- Document Progress Line Indicators (McKinsey Elegant Lines - Back to exactly 3 segments!) -->
-      <div class="max-w-4xl mx-auto w-full px-4 py-3 flex justify-between items-center gap-2 select-none overflow-x-auto mt-4 border-t border-slate-200/60">
-        <button onclick="goToDocSlide(0)" id="doc-indicator-0" class="doc-indicator-btn flex items-center gap-1.5 focus:outline-none shrink-0 group active-doc-indicator">
-          <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand transition-colors">學生請假單</span>
-          <div class="doc-indicator-line w-4 group-hover:w-8"></div>
-          <div class="doc-indicator-bullet w-2.5 h-2.5 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToDocSlide(1)" id="doc-indicator-1" class="doc-indicator-btn flex items-center gap-1.5 focus:outline-none shrink-0 group">
-          <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand transition-colors">外出申請單</span>
-          <div class="doc-indicator-line w-4 group-hover:w-8"></div>
-          <div class="doc-indicator-bullet w-2.5 h-2.5 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToDocSlide(2)" id="doc-indicator-2" class="doc-indicator-btn flex items-center gap-1.5 focus:outline-none shrink-0 group">
-          <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand transition-colors">行動載具同意書</span>
-          <div class="doc-indicator-line w-4 group-hover:w-8"></div>
-          <div class="doc-indicator-bullet w-2.5 h-2.5 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
       </div>
     </section>
 
@@ -904,7 +921,7 @@
           <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1 shadow-sm">
             <span class="text-slate-400 text-xs flex items-center gap-1"><i class="fa-solid fa-envelope text-brand"></i> 生教組信箱</span>
             <p class="text-xs font-bold text-slate-800 leading-snug pt-0.5">
-              <a href="mailto:C2@apps.kdps.tp.edu.tw" class="hover:text-brand transition-colors font-black">C2@apps.kdps.tp.edu.tw</a>
+              <a href="/cdn-cgi/l/email-protection#1e5d2c5e7f6e6e6d30757a6e6d306a6e307b7a6b306a69" class="hover:text-brand transition-colors font-black"><span class="__cf_email__" data-cfemail="70334230110000035e1b1400035e04005e1514055e0407">[email&#160;protected]</span></a>
             </p>
           </div>
         </div>
@@ -952,7 +969,7 @@
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[10px] text-slate-500">
         <div class="space-y-1">
           <p>© 2026 臺北市立關渡國民小學學務處生教組 版權所有. All rights reserved.</p>
-          <p>聯絡窗口：生教組長 (02)2891-2847 分機 824 | 傳真：(02)2895-2910 | 郵箱：C2@apps.kdps.tp.edu.tw</p>
+          <p>聯絡窗口：生教組長 (02)2891-2847 分機 824 | 傳真：(02)2895-2910 | 郵箱：<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cd8eff8dacbdbdbee3a6a9bdbee3b9bde3a8a9b8e3b9ba">[email&#160;protected]</a></p>
         </div>
         <div class="flex items-center gap-3 shrink-0">
           <a href="#" class="hover:underline">網頁隱私權宣告</a>
@@ -966,7 +983,7 @@
 
 
   <!-- JAVASCRIPT CAROUSEL LOGIC -->
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Scroll progress indicator
     window.addEventListener('scroll', () => {
       const scrollProgress = document.getElementById('scroll-progress');
@@ -1137,5 +1154,5 @@
       }
     }
   </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2dfc5abd8a54aa3',t:'MTc4NzIxMTg1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
