@@ -1,1158 +1,187 @@
 <!DOCTYPE html>
-<html lang="zh-TW" class="scroll-smooth">
+<html lang="zh-Hant-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>臺北市關渡國小學務處生教組 | 115學年度制服與常用表單公告</title>
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts: Inter & Noto Sans TC (Tech & Professional McKinsey Sans-Serif) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              light: '#f0f4f8', /* McKinsey light slate-blue background */
-              DEFAULT: '#005A9C', /* McKinsey Primary Blue */
-              dark: '#0A1D37', /* McKinsey Deep Navy */
-              cyan: '#0096C7' /* McKinsey Accent Cyan */
-            },
-            crimson: {
-              light: '#fdf2f2',
-              DEFAULT: '#a61c28', /* McKinsey warning red */
-              dark: '#7f1d1d'
-            },
-            slate: {
-              950: '#051c2c', /* McKinsey deepest navy */
-              900: '#0f2537',
-              800: '#1e3046',
-              700: '#334e68',
-              600: '#486581',
-              500: '#627d98',
-              200: '#d1e2ec',
-              100: '#f0f4f8',
-              50: '#f8fafc'
-            }
-          },
-          fontFamily: {
-            sans: ['"Noto Sans TC"', '"Inter"', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- 
-    ★ McKinsey Presentation Style Fallback CSS ★
-    原生 CSS 強制實行「麥肯錫簡報配色與幾何硬挺線條」，
-    確保不論 Tailwind 載入快慢，網頁永遠呈現麥肯錫經典「深藍、亮藍與淺藍灰網格」的商用美學。
-  -->
-  <style>
-    /* ★ 手機端防左右滑動、強制左右固定、僅限上下滑動之黃金防溢出規則 ★ */
-    html, body {
-      width: 100% !important;
-      max-width: 100vw !important;
-      overflow-x: hidden !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      box-sizing: border-box !important;
-    }
-    /* 麥肯錫風格導覽列強制約束 */
-    #sticky-header {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-      padding: 12px 24px !important;
-      background-color: #ffffff !important;
-      border-bottom: 2px solid #005A9C !important; /* 麥肯錫深藍下底線 */
-      box-shadow: 0 4px 15px rgba(5, 28, 44, 0.04) !important;
-    }
-
-    #sticky-header .group {
-      display: flex !important;
-      align-items: center !important;
-      gap: 12px !important;
-      text-decoration: none !important;
-    }
-
-    /* 幾何硬挺外框 */
-    #logo-container-wrapper {
-      width: 26px !important;
-      height: 26px !important;
-      min-width: 26px !important;
-      min-height: 26px !important;
-      border-radius: 0% !important; /* 麥肯錫幾何形狀：改為硬挺方形框 */
-      background-color: #ffffff !important;
-      border: 1px solid #005A9C !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      overflow: hidden !important;
-    }
-
-    #logo-container-wrapper img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: contain !important;
-    }
-
-    #header-title {
-      font-family: "Noto Sans TC", sans-serif !important;
-      font-weight: 800 !important;
-      color: #0A1D37 !important; /* 麥肯錫深海藍 */
-      font-size: 15px !important;
-      line-height: 1.2 !important;
-      white-space: nowrap !important;
-    }
-
-    #header-subtitle {
-      font-family: "Inter", sans-serif !important;
-      color: #005A9C !important;
-      font-size: 8px !important;
-      font-weight: 700 !important;
-      margin-top: 1px !important;
-      white-space: nowrap !important;
-    }
-
-    @media (min-width: 640px) {
-      #logo-container-wrapper {
-        width: 32px !important;
-        height: 32px !important;
-        min-width: 32px !important;
-        min-height: 32px !important;
-      }
-      #header-title {
-        font-size: 19px !important;
-      }
-      #header-subtitle {
-        font-size: 9px !important;
-      }
-    }
-
-    /* 幾何硬挺邊框與實體方正線條 */
-    .mckinsey-border {
-      border: 1px solid #d1e2ec !important;
-    }
-
-    /* 雙輪播系統 (Carousel Tracks) */
-    .carousel-track, .doc-carousel-track {
-      display: flex;
-      width: 100%;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: transform;
-    }
-
-    /* 麥肯錫橫線導覽條指示器 */
-    .indicator-line, .doc-indicator-line {
-      height: 2px;
-      background-color: #cbd5e1;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    
-    .active-indicator .indicator-line, .active-doc-indicator .doc-indicator-line {
-      width: 48px !important;
-      background-color: #005A9C !important;
-    }
-
-    .active-indicator .indicator-bullet, .active-doc-indicator .doc-indicator-bullet {
-      background-color: #005A9C !important;
-      border-color: #005A9C !important;
-    }
-
-    /* McKinsey Styled Inner Scrollbar for rule boxes */
-    .mckinsey-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .mckinsey-scrollbar::-webkit-scrollbar-track {
-      background: #f1f5f9;
-      border-radius: 3px;
-    }
-    .mckinsey-scrollbar::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 3px;
-    }
-    .mckinsey-scrollbar::-webkit-scrollbar-thumb:hover {
-      background: #005A9C;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>115學年度制服購買公告｜臺北市北投區關渡國民小學 學務處生教組</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC","Noto Sans CJK TC",system-ui,-apple-system,sans-serif;background:#f1f7f4;color:#22312b;line-height:1.8}
+.container{max-width:960px;margin:0 auto;padding:0 16px}
+.site-header{background:linear-gradient(135deg,#14523e 0%,#1f7a5c 55%,#2f9b75 100%);color:#fff;padding:28px 0 24px}
+.header-inner{display:flex;align-items:center;gap:16px}
+.school-mark{flex:0 0 auto;width:52px;height:52px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:700}
+.school-name{font-size:14px;letter-spacing:2px;opacity:.94;margin-bottom:2px}
+.site-header h1{font-size:25px;font-weight:700;letter-spacing:1px}
+.crumb{background:#fff;border-bottom:1px solid #dcece4}
+.crumb .container{padding:10px 16px;font-size:14px}
+.crumb a{color:#1f7a5c;text-decoration:none}
+.crumb a:hover{text-decoration:underline}
+main{padding:26px 0 44px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{background:#e8f5ee;border:1px solid #c4e4d3;color:#14523e;font-size:13px;padding:4px 12px;border-radius:999px}
+h2.sec{font-size:20px;color:#14523e;border-left:5px solid #d97706;padding-left:12px;margin:34px 0 14px}
+h3.sub{font-size:16px;color:#14523e;margin:18px 0 8px}
+p{margin:10px 0}
+ul,ol{margin:10px 0 10px 24px}
+li{margin:7px 0}
+.note{background:#fff8e6;border:1px solid #f3d9a0;border-left:5px solid #d97706;border-radius:8px;padding:12px 16px;margin:14px 0;font-size:14px}
+.note.blue{background:#eef5ff;border-color:#c5daf5;border-left-color:#1d5fa8}
+.note.green{background:#eefaf3;border-color:#bfe6d0;border-left-color:#1f7a5c}
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid #dcece4;border-radius:10px;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:480px}
+th{background:#14523e;color:#fff;padding:10px 14px;text-align:left}
+td{padding:10px 14px;border-top:1px solid #edf4f0}
+tr:nth-child(even) td{background:#f6faf8}
+td.num,th.num{text-align:right}
+.price-big{background:#e8f5ee;border-radius:12px;padding:16px 18px;margin:14px 0;border:1px solid #c4e4d3}
+.price-big b{color:#14523e}
+.step{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #dcece4;border-radius:12px;padding:14px 16px;margin:10px 0}
+.step .no{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#1f7a5c;color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+.step b{color:#14523e}
+.step p{margin:2px 0 0;font-size:14px;color:#4b5f56}
+.contact{background:#fff;border:1px solid #dcece4;border-radius:14px;padding:20px;margin-top:36px}
+.contact h2{font-size:18px;color:#14523e;margin-bottom:8px}
+.contact p{font-size:14px;color:#4b5f56;margin:4px 0}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-block;background:#1f7a5c;color:#fff;text-decoration:none;padding:10px 24px;border-radius:999px;font-size:15px}
+.btn.ghost{background:#fff;color:#1f7a5c;border:1px solid #b9dccb}
+footer{background:#123f30;color:#bfe0d2;font-size:13px;padding:22px 0 26px;margin-top:20px}
+footer .container{display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between}
+footer a{color:#8fd9bb;text-decoration:none}
+@media (max-width:600px){.site-header h1{font-size:20px}}
+@media print{.site-header,.crumb,.btn-row,footer{display:none}main{padding:0}}
+</style>
 </head>
-<body class="bg-[#F4F7FA] text-slate-800 font-sans antialiased leading-relaxed overflow-x-hidden">
+<body>
 
-  <!-- Scroll Progress Indicator -->
-  <div id="scroll-progress"></div>
-
-  <!-- FLOATING SIDEBAR NAVIGATION WIDGET -->
-  <div class="fixed right-6 top-1/4 z-40 hidden xl:flex flex-col items-end gap-5 select-none pointer-events-auto">
-    <a href="#news" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-500 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">一、最新消息公告</span>
-      <div class="h-[2px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
-      <div class="w-4 h-4 border border-slate-400 group-hover:border-brand bg-white group-hover:bg-brand flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <i class="fa-solid fa-newspaper text-[8px] text-slate-400 group-hover:text-white transition-colors"></i>
-      </div>
-    </a>
-    <a href="#hero" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">二、開學制服日程看板</span>
-      <div class="h-[2px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
-      <div class="w-4 h-4 border border-slate-400 group-hover:border-brand bg-white group-hover:bg-brand flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <i class="fa-solid fa-shirt text-[8px] text-slate-400 group-hover:text-white transition-colors"></i>
-      </div>
-    </a>
-    <a href="#documents" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">三、常用表單與規定</span>
-      <div class="h-[2px] w-6 group-hover:w-12 bg-slate-300 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
-      <div class="w-4 h-4 border border-slate-400 group-hover:border-brand bg-white group-hover:bg-brand flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <i class="fa-solid fa-file-arrow-down text-[8px] text-slate-400 group-hover:text-white transition-colors"></i>
-      </div>
-    </a>
-    <a href="#contact" class="group flex items-center justify-end h-8 cursor-pointer">
-      <span class="text-xs font-bold text-slate-400 group-hover:text-brand transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0">四、聯絡與諮詢生教組</span>
-      <div class="h-[2px] w-6 group-hover:w-12 bg-slate-200 group-hover:bg-brand transition-all duration-300 mr-3 ml-3"></div>
-      <div class="w-4 h-4 border border-slate-400 group-hover:border-brand bg-white group-hover:bg-brand flex items-center justify-center transition-all duration-300 shrink-0 shadow-sm">
-        <i class="fa-solid fa-envelope text-[8px] text-slate-400 group-hover:text-white transition-colors"></i>
-      </div>
-    </a>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="school-mark">關渡</div>
+    <div>
+      <p class="school-name">臺北市北投區關渡國民小學 學務處生教組</p>
+      <h1>115學年度制服購買公告</h1>
+    </div>
   </div>
+</header>
 
-  <!-- Header & Sticky Navbar -->
-  <header id="sticky-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-3 px-6 md:px-12 flex justify-between items-center bg-white/80 backdrop-blur-md border-b-2 border-brand">
-    <a href="#" class="flex items-center gap-2.5 group">
-      <div id="logo-container-wrapper" class="relative bg-white border border-brand flex items-center justify-center overflow-hidden shrink-0" style="width: 28px; height: 28px;">
-        <img src="assets/logo.png" alt="關渡國小校徽" class="w-full h-full object-contain">
-      </div>
-      <div class="title-text-flex-container flex flex-col">
-        <span class="font-bold tracking-wider text-brand-dark" id="header-title">臺北市關渡國小學務處生教組</span>
-        <span class="font-display text-[9px] md:text-[10px] tracking-widest text-brand font-bold uppercase leading-none mt-0.5">GUANDU ELEMENTARY SCHOOL · STUDENT AFFAIRS</span>
-      </div>
-    </a>
+<nav class="crumb">
+  <div class="container"><a href="index.html">← 回首頁（生教組公告專區）</a></div>
+</nav>
 
-    <!-- Desktop Navigation Links (McKinsey Optimized: Larger & Vertically Centered) -->
-    <nav class="hidden md:flex items-center justify-center gap-10 text-[16px] font-bold text-slate-700 h-full self-center align-middle my-auto">
-      <a href="#news" class="hover:text-brand hover:scale-105 transition-all duration-200">最新消息</a>
-      <a href="#hero" class="hover:text-brand hover:scale-105 transition-all duration-200">制服日程</a>
-      <a href="#documents" class="hover:text-brand hover:scale-105 transition-all duration-200">常用表單</a>
-      <a href="#contact" class="hover:text-brand hover:scale-105 transition-all duration-200">聯絡生教組</a>
-    </nav>
-
-    <!-- Header Actions -->
-    <div class="hidden md:flex items-center gap-3">
-      <a href="http://www.kdps.tp.edu.tw/" target="_blank" class="text-xs font-bold px-4 py-2 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 hover:text-brand transition-all duration-200 flex items-center gap-1.5 shadow-sm">
-        <span>學校官網</span>
-        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-      </a>
+<main>
+  <div class="container">
+    <div class="meta">
+      <span class="chip">發布單位：學務處生教組</span>
+      <span class="chip">公告日期：115年8月26日</span>
+      <span class="chip">對象：全校學生（含新生）</span>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobile-menu-toggle" class="md:hidden text-xl text-slate-700 hover:text-brand focus:outline-none transition-colors">
-      <i class="fa-solid fa-bars" id="menu-icon"></i>
-    </button>
-  </header>
+    <p>親愛的家長您好！本學年度制服改採<b>電話向廠商訂購</b>方式辦理，不需到校現場購買。全校學生（含新生）之<b>夏季、冬季制服</b>，均可依下列流程向制服廠商<b>一富有限公司</b>電話訂購，配送到校後由學生帶回，歡迎多加利用。詳細說明如下：</p>
 
-  <!-- Mobile Dropdown Menu -->
-  <div id="mobile-menu" class="fixed inset-0 bg-white/98 backdrop-blur-md z-40 flex flex-col justify-center items-center gap-6 py-20 px-8 transition-all duration-300 ease-in-out transform translate-x-full md:hidden">
-    <a href="#news" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">最新消息</a>
-    <a href="#hero" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">制服日程</a>
-    <a href="#documents" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">常用表單</a>
-    <a href="#contact" onclick="closeMobileMenu()" class="font-bold text-xl text-slate-800 hover:text-brand">聯絡生教組</a>
-    <div class="h-px w-20 bg-slate-100 my-2"></div>
-    <a href="http://www.kdps.tp.edu.tw/" target="_blank" class="text-sm font-bold px-5 py-2.5 bg-slate-50 text-slate-700 border border-slate-200 rounded-lg">學校官網</a>
+    <!-- ========== 一、電話訂購流程 ========== -->
+    <h2 class="sec">一、訂購流程（電話向一富有限公司訂購）</h2>
+
+    <div class="step">
+      <div class="no">1</div>
+      <div><b>致電廠商</b>
+        <p>撥打一富有限公司專線 <b>(02) 2971-2213</b>，告知：「關渡國小」、學生<b>班級、姓名</b>、需要的<b>品項與尺寸</b>（夏季／冬季、上衣／褲子）。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="no">2</div>
+      <div><b>轉帳付款</b>
+        <p>依廠商提供之<b>匯款（轉帳）資訊</b>完成付款；請妥善保存匯款證明。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="no">3</div>
+      <div><b>配送到校</b>
+        <p>廠商將訂購之服裝配送至關渡國小學務處生教組。</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="no">4</div>
+      <div><b>學生帶回</b>
+        <p>服裝送達後，由<b>學務處生教組通知學生</b>於校內領回。</p>
+      </div>
+    </div>
+
+    <div class="note blue">
+      🏭 <b>廠商：</b>一富有限公司　📞 <b>專線：</b><a href="tel:0229712213" style="color:#1d5fa8">(02) 2971-2213</a><br>
+      📍 <b>地址：</b>新北市三重區重陽路一段128號3F　⏰ 建議於<b>平日上班時間</b>來電訂購
+    </div>
+
+    <!-- ========== 二、品項與價格 ========== -->
+    <h2 class="sec">二、品項與價格</h2>
+
+    <h3 class="sub">☀️ 夏季制服（短袖上衣＋短褲）</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>品項</th><th class="num">價格</th><th>說明</th></tr>
+        <tr><td>運動短衫（短袖上衣）</td><td class="num">NT$ 300</td><td rowspan="2">電話訂購，轉帳付款</td></tr>
+        <tr><td>運動短褲（短褲）</td><td class="num">NT$ 210</td></tr>
+      </table>
+    </div>
+    <div class="price-big">💰 <b>夏季一套小計：NT$ 510</b></div>
+
+    <h3 class="sub">❄️ 冬季制服（長袖上衣＋長褲）</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>品項</th><th class="num">價格</th><th>說明</th></tr>
+        <tr><td>運動長衫（長袖上衣）</td><td class="num">NT$ 340</td><td rowspan="2">電話訂購，轉帳付款<br>預計<b>10月30日前</b>交貨配送</td></tr>
+        <tr><td>運動長褲（長褲）</td><td class="num">NT$ 300</td></tr>
+      </table>
+    </div>
+    <div class="price-big">📝 <b>冬季一套小計：NT$ 640</b></div>
+
+    <p class="note green">📏 <b>尺寸怎麼選？</b>可參考孩子目前穿著之制服尺寸，或於訂購時先向廠商確認；如有尺寸疑慮，亦可電洽學務處生教組（02）2891-2847 轉 824 協助。</p>
+
+    <!-- ========== 三、注意事項 ========== -->
+    <h2 class="sec">三、注意事項</h2>
+    <ul>
+      <li>訂購及匯款資訊請以<b>廠商專線 (02) 2971-2213</b> 提供者為準；如有任何疑慮，請先電洽<b>學務處生教組</b>確認，避免受騙。</li>
+      <li>冬季制服如需於換季前備妥，建議<b>儘早來電訂購</b>，以便於10月30日前交貨。</li>
+      <li>收到服裝後請<b>儘速檢查尺寸與數量</b>；如有問題請於收到後數日內洽廠商或生教組，逾期恐影響換貨。</li>
+      <li>制服請<b>勿修改款式</b>（如改窄管、拆校名標誌）；建議於衣物內側<b>標示班級姓名</b>。</li>
+      <li>為落實關渡綠色校園，領回服裝時建議<b>自備環保提袋</b>。</li>
+    </ul>
+
+    <!-- ========== 四、常見問答 ========== -->
+    <h2 class="sec">四、常見問答 FAQ</h2>
+    <h3 class="sub">Q1：制服要怎麼買？</h3>
+    <p><b>A：</b>直接撥打一富有限公司專線 <b>(02) 2971-2213</b> 電話訂購即可（流程見上方第一點），不需到校購買。</p>
+    <h3 class="sub">Q2：要準備多少錢？</h3>
+    <p><b>A：</b>夏季一套 <b>$510 元</b>（上衣 $300＋短褲 $210）；冬季一套 <b>$640 元</b>（上衣 $340＋長褲 $300）。費用依廠商提供資訊<b>轉帳付款</b>。</p>
+    <h3 class="sub">Q3：訂購後多久可以拿到？</h3>
+    <p><b>A：</b>廠商配送到校後，<b>學務處生教組會通知學生領取</b>；冬季制服預計 <b>10月30日前</b>交貨配送。</p>
+    <h3 class="sub">Q4：家裡有舊制服，可以只買其中一件嗎？</h3>
+    <p><b>A：</b>可以，電話訂購時告知需要的品項與尺寸即可，<b>可單品購買</b>，不一定要買整套。</p>
+    <h3 class="sub">Q5：尺寸不合怎麼辦？</h3>
+    <p><b>A：</b>請於收到後<b>儘速</b>洽一富有限公司或學務處生教組協助處理，逾期或已下水、剪標之服裝恐無法更換。</p>
+
+    <div class="contact">
+      <h2>洽詢窗口</h2>
+      <p>學務處生教組：（02）2891-2847 轉分機 824（承辦人：生教組長 紀博薰老師）</p>
+      <p>廠商（一富有限公司）：（02）2971-2213</p>
+      <p style="color:#7f948a;font-size:13px">※ 上班時間：週一至週五 08:00–16:00（請避免於上課時間撥打，可於課間或放學後聯繫）</p>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn" href="index.html">← 回首頁（公告專區）</a>
+      <a class="btn ghost" href="#top">↑ 返回頂端</a>
+    </div>
   </div>
+</main>
 
+<footer>
+  <div class="container">
+    <span>臺北市北投區關渡國民小學 學務處生教組</span>
+    <span>電話：(02) 2891-2847 轉分機 824</span>
+    <span>地址：11257 臺北市北投區中央北路四段581號</span>
+    <a href="http://www.kdps.tp.edu.tw/" target="_blank" rel="noopener">學校官網 →</a>
+  </div>
+</footer>
 
-  <!-- MAIN CONTAINER (SaaS Portal Layout) -->
-  <main class="min-h-screen pt-28 pb-12">
-    
-    <!-- Top Introduction Header Block -->
-    <div class="max-w-4xl mx-auto px-6 text-center pb-8">
-      <div class="flex items-center justify-center gap-2 text-xs font-extrabold tracking-widest text-brand uppercase mb-3">
-        <span>學務生教公告</span>
-        <span class="text-slate-300">•</span>
-        <span>常用表單下載</span>
-      </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight leading-tight">
-        115學年度制服相關公告
-      </h1>
-      <p class="text-sm md:text-base text-slate-500 font-medium max-w-2xl mx-auto mt-2 leading-relaxed">
-        臺北市關渡國小學務處為家長整理的新生始業輔導及開學制服採購、平日補購及常見問題 FAQ 完整指南。
-      </p>
-    </div>
-
-
-    <!-- 🟢 SECTION 1: LATEST ANNOUNCEMENTS (最新消息公告) -->
-    <!-- McKinsey Solid Blue Grid -->
-    <section id="news" class="py-12 px-6 md:px-12 bg-white border-y border-slate-200 scroll-mt-24">
-      <div class="max-w-4xl mx-auto space-y-6">
-        <div class="flex items-center justify-between">
-          <div class="space-y-1">
-            <h3 class="font-extrabold text-brand-dark text-lg sm:text-xl">最新消息公告</h3>
-            <p class="text-[11px] text-slate-400">學務處生教組發布之重要常規公告</p>
-          </div>
-          <span class="text-[10px] font-bold text-brand uppercase font-mono">NEWS GRID</span>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Card 1 (Uniform Regulations - First!) -->
-          <div class="border border-slate-200 bg-brand-light/30 rounded-xl p-5 shadow-sm space-y-3 hover:border-brand transition-all flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="text-[10px] text-brand font-bold flex items-center gap-1"><i class="fa-regular fa-clock"></i> 2026/08/07</span>
-              <h4 class="font-bold text-sm text-slate-900 leading-snug line-clamp-2">【服裝規定】全校學生制服改在每週星期二統一穿著</h4>
-              <p class="text-xs text-slate-500 line-clamp-3">為落實校園服裝儀容整潔，落實生活教育與常規培養，自 115 學年度起全校學生制服改在週二穿著...</p>
-            </div>
-            <button onclick="goToSlide(1)" class="text-[11px] text-brand font-bold flex items-center gap-1 pt-2 w-fit hover:text-brand-dark">
-              <span>查看規定</span> <i class="fa-solid fa-chevron-right text-[8px]"></i>
-            </button>
-          </div>
-
-          <!-- Card 2 (Uniform Schedule - Second!) -->
-          <div class="border border-slate-200 bg-brand-light/30 rounded-xl p-5 shadow-sm space-y-3 hover:border-brand transition-all flex flex-col justify-between">
-            <div class="space-y-2">
-              <span class="text-[10px] text-brand font-bold flex items-center gap-1"><i class="fa-regular fa-clock"></i> 2026/08/06</span>
-              <h4 class="font-bold text-sm text-slate-900 leading-snug line-clamp-2">【重要】115學年度新生制服開學現場販售及大門口套量時程</h4>
-              <p class="text-xs text-slate-500 line-clamp-3 leading-relaxed">學務處公告：本年度新生入學制服於 8/22(六) 及 9/3(四) 於關渡國小大門口現場販售...</p>
-            </div>
-            <button onclick="goToSlide(0)" class="text-[11px] text-brand font-bold flex items-center gap-1 pt-2 w-fit hover:text-brand-dark">
-              <span>查看日程</span> <i class="fa-solid fa-chevron-right text-[8px]"></i>
-            </button>
-          </div>
-
-          <!-- Card 3 (Dashed Empty Card Slot) -->
-          <div class="border-2 border-dashed border-slate-200 bg-slate-50 rounded-xl p-5 flex flex-col items-center justify-center text-center opacity-35 min-h-[160px]">
-            <i class="fa-solid fa-calendar-check text-xl text-slate-400"></i>
-            <h4 class="font-bold text-xs text-slate-600 mt-1">校園活動</h4>
-            <p class="text-[9px] font-semibold tracking-wider uppercase font-mono">（欄位保留空白）</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 🟢 SECTION 2: HORIZONTAL CAROUSEL (全站重心：橫向輪播 - 制服販售日程) -->
-    <!-- McKinsey Clean Navy Frame -->
-    <section id="hero" class="py-12 bg-white scroll-mt-24 flex flex-col justify-start">
-      
-      <!-- 
-        ★ CAROUSEL TIMELINE PROGRESS INDICATORS (Moved to the TOP of the Carousel!) ★
-      -->
-      <div class="max-w-4xl mx-auto w-full px-6 pb-6 border-b border-slate-100 flex justify-between items-center gap-2 select-none overflow-x-auto mb-6">
-        <button onclick="goToSlide(0)" id="indicator-0" class="indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group active-indicator">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-extrabold text-slate-400 group-hover:text-brand transition-colors">時程公告</span>
-          <div class="indicator-line w-3 group-hover:w-6"></div>
-          <div class="indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToSlide(1)" id="indicator-1" class="indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-extrabold text-slate-400 group-hover:text-brand transition-colors">☀️夏季制服</span>
-          <div class="indicator-line w-3 group-hover:w-6"></div>
-          <div class="indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToSlide(2)" id="indicator-2" class="indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-extrabold text-slate-400 group-hover:text-brand transition-colors">❄️冬季制服</span>
-          <div class="indicator-line w-3 group-hover:w-6"></div>
-          <div class="indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToSlide(3)" id="indicator-3" class="indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-extrabold text-slate-400 group-hover:text-brand transition-colors">🔄平日補購</span>
-          <div class="indicator-line w-3 group-hover:w-6"></div>
-          <div class="indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToSlide(4)" id="indicator-4" class="indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-extrabold text-slate-400 group-hover:text-brand transition-colors">🤔常見問答</span>
-          <div class="indicator-line w-3 group-hover:w-6"></div>
-          <div class="indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-      </div>
-
-      <!-- Main Carousel Row -->
-      <div class="max-w-5xl mx-auto px-2 md:px-12 flex items-center select-none relative w-full">
-        
-        <!-- Prev Arrow -->
-        <button onclick="prevSlide()" class="absolute left-1 sm:left-4 md:left-6 z-20 flex w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-md focus:outline-none" title="上一頁">
-          <i class="fa-solid fa-chevron-left text-xs"></i>
-        </button>
-
-        <!-- Carousel Frame -->
-        <div class="w-full overflow-hidden rounded-2xl border-2 border-slate-200 bg-white p-3 md:p-6 shadow-md relative mx-6 sm:mx-10">
-          <div class="carousel-track" id="carousel-track">
-            
-            <!-- ==================== SLIDE 1: SCHEDULE ==================== -->
-            <div class="w-full shrink-0 px-2 md:px-4 space-y-6">
-              <!-- Image Banner -->
-              <div class="w-full rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-sm relative max-h-[220px] sm:max-h-[300px]">
-                <img src="assets/panorama.png?v=5" alt="關渡國小校園風景" class="w-full h-full object-cover">
-              </div>
-              <!-- Info block -->
-              <div class="space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-[#EBF4FA] text-brand-dark text-xs font-bold uppercase tracking-wider">開學日程 / Announcements</span>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">新生專區</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">8/22 (六)</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">9/3 (四)</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">大門口</span>
-                  </div>
-                </div>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-brand-dark tracking-tight">
-                  115學年度開學制服販售日程 <span class="text-slate-400 font-normal">| Purchase Schedule</span>
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed">
-                  親愛的家長您好！為協助學生順利備齊制服，學務處已偕同廠商一富有限公司規劃好開學階段大門口現場販售日程。
-                </p>
-                <!-- Content Detail inside Card -->
-                <div class="grid sm:grid-cols-2 gap-4 border-t border-slate-100 pt-4">
-                  <div class="p-4 rounded bg-brand-light/40 border border-slate-200 flex flex-col justify-between gap-2 shadow-sm">
-                    <span class="text-[10px] font-bold text-crimson">第一階段 / Phase 1</span>
-                    <p class="font-extrabold text-lg text-slate-900 leading-none mt-1">8 / 22 日 (六) <span class="text-xs text-slate-500 font-normal">早上 09:00~11:00</span></p>
-                    <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot text-crimson mr-1"></i>地點：關渡國小大門口</p>
-                  </div>
-                  <div class="p-4 rounded bg-brand-light/40 border border-slate-200 flex flex-col justify-between gap-2 shadow-sm">
-                    <span class="text-[10px] font-bold text-slate-500">第二階段 / Phase 2</span>
-                    <p class="font-extrabold text-lg text-slate-900 leading-none mt-1">9 / 03 日 (四) <span class="text-xs text-slate-500 font-normal">早上 07:30~09:00</span></p>
-                    <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-location-dot mr-1 text-brand"></i>地點：關渡國小大門口</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ==================== SLIDE 2: SUMMER UNIFORM ==================== -->
-            <div class="w-full shrink-0 px-2 md:px-4 space-y-6">
-              <div class="w-full rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-sm relative max-h-[220px] sm:max-h-[300px]">
-                <img src="assets/summer-uniform.png?v=6" alt="夏季制服樣式" class="w-full h-full object-cover">
-              </div>
-              <div class="space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-[#FFF5E6] text-amber-800 text-xs font-bold uppercase tracking-wider">服裝規定 / Summer Edition</span>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">短袖上衣</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">短褲</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">現金付款</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">現場取貨</span>
-                  </div>
-                </div>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-brand-dark tracking-tight">
-                  夏季制服：短袖上衣與短褲 <span class="text-slate-400 font-normal">| Summer Uniform Guide</span>
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500 font-medium">
-                  夏季制服開放現場套量、試穿並現金選購。為落實關渡綠色校園，建議攜帶環保提袋。
-                </p>
-                <!-- Content Detail (Updated with Summer Prices: $300 & $210) -->
-                <div class="p-4 rounded border border-slate-200 space-y-3 shadow-sm text-xs sm:text-sm bg-white">
-                  <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
-                    <span class="text-slate-400 font-bold">👕 販售品項 & 價格</span>
-                    <div class="col-span-2 space-y-1.5">
-                      <div class="flex justify-between font-bold text-slate-900">
-                        <span>運動短衫（短袖上衣）</span>
-                        <span class="text-brand font-black">NT$ 300</span>
-                      </div>
-                      <div class="flex justify-between font-bold text-slate-900">
-                        <span>運動短褲（短褲）</span>
-                        <span class="text-brand font-black">NT$ 210</span>
-                      </div>
-                      <div class="h-px bg-slate-150 my-1"></div>
-                      <div class="flex justify-between font-black text-crimson text-[13px]">
-                        <span>夏季一套小計</span>
-                        <span>NT$ 510</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
-                    <span class="text-slate-400 font-bold">💰 付款取貨</span>
-                    <span class="col-span-2 font-bold text-crimson">限現場現金購買，當場領取衣服</span>
-                  </div>
-                  <div class="grid grid-cols-3 gap-2 pb-1">
-                    <span class="text-slate-400 font-bold">🔍 套量建議</span>
-                    <span class="col-span-2 font-semibold text-slate-600">現場備有各尺寸樣衣供套量，請家長協助確認尺碼</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ==================== SLIDE 3: WINTER UNIFORM ==================== -->
-            <div class="w-full shrink-0 px-2 md:px-4 space-y-6">
-              <div class="w-full rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-sm relative max-h-[220px] sm:max-h-[300px]">
-                <img src="assets/winter-uniform.png?v=6" alt="冬季制服樣式" class="w-full h-full object-cover">
-              </div>
-              <div class="space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">預購專區 / Winter Edition</span>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">長袖上衣</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">長褲</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">填預購單</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">三聯單收費</span>
-                  </div>
-                </div>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-brand-dark tracking-tight">
-                  冬季制服：長袖上衣與長褲 <span class="text-slate-400 font-normal">| Winter Uniform Guide</span>
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500 font-medium">
-                  冬季服裝在販售當天【不提供現貨販售】，採現場登記尺寸填預購單，後續併入三聯單繳費。
-                </p>
-                <!-- Content Detail (Updated with Winter Prices: $340 & $300) -->
-                <div class="p-4 rounded border border-slate-200 space-y-3 shadow-sm text-xs sm:text-sm bg-white">
-                  <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
-                    <span class="text-slate-400 font-bold">👕 販售品項 & 價格</span>
-                    <div class="col-span-2 space-y-1.5">
-                      <div class="flex justify-between font-bold text-slate-900">
-                        <span>運動長衫（長袖上衣）</span>
-                        <span class="text-brand font-black">NT$ 340</span>
-                      </div>
-                      <div class="flex justify-between font-bold text-slate-900">
-                        <span>運動長褲（長褲）</span>
-                        <span class="text-brand font-black">NT$ 300</span>
-                      </div>
-                      <div class="h-px bg-slate-150 my-1"></div>
-                      <div class="flex justify-between font-black text-slate-700 text-[13px]">
-                        <span>冬季一套預購小計</span>
-                        <span>NT$ 640</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="grid grid-cols-3 gap-2 border-b border-slate-100 pb-2">
-                    <span class="text-slate-400 font-bold">📝 購買方式</span>
-                    <span class="col-span-2 font-bold text-brand">當日僅需填寫預購單，預計 10 月 30 日前交貨配送</span>
-                  </div>
-                  <div class="grid grid-cols-3 gap-2 pb-1">
-                    <span class="text-slate-400 font-bold">💰 付款方式</span>
-                    <span class="col-span-2 font-semibold text-slate-600">不需現場付現，費用後續將併入學校三聯單代收</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ==================== SLIDE 4: REORDER FLOW ==================== -->
-            <div class="w-full shrink-0 px-2 md:px-4 space-y-6">
-              <!-- Image Banner -->
-              <div class="w-full rounded-xl overflow-hidden border border-slate-200/80 bg-slate-100 shadow-sm relative max-h-[220px] sm:max-h-[300px]">
-                <img src="assets/shipping-workflow.png" alt="平日補購物流流程" class="w-full h-full object-cover">
-              </div>
-              <div class="space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-brand-light text-brand text-xs font-bold uppercase tracking-wider">補購專區 / Regular Reorders</span>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">一富有限公司</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">電話補購</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">配送到校</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">生教組登記</span>
-                  </div>
-                </div>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-brand-dark tracking-tight">
-                  學期中平日補購流程 <span class="text-slate-400 font-normal">| Regular Reorder Process</span>
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500 font-medium">
-                  若家長錯過以上兩個販售日，或是學期中孩子長高有補購服裝需求，我們已協調廠商利用電話補購，流程與配合方式如下：
-                </p>
-                <div class="grid grid-cols-4 gap-2 pt-1">
-                  <div class="p-2 rounded bg-white border border-slate-150 text-center">
-                    <span class="text-[9px] font-extrabold text-brand bg-brand-light w-4 h-4 rounded-full inline-flex items-center justify-center">1</span>
-                    <span class="block font-bold text-[10px] text-slate-800 mt-1">1.致電廠商</span>
-                  </div>
-                  <div class="p-2 rounded bg-white border border-slate-150 text-center">
-                    <span class="text-[9px] font-extrabold text-brand bg-brand-light w-4 h-4 rounded-full inline-flex items-center justify-center">2</span>
-                    <span class="block font-bold text-[10px] text-slate-800 mt-1">2.轉帳付款</span>
-                  </div>
-                  <div class="p-2 rounded bg-white border border-slate-150 text-center">
-                    <span class="text-[9px] font-extrabold text-brand bg-brand-light w-4 h-4 rounded-full inline-flex items-center justify-center">3</span>
-                    <span class="block font-bold text-[10px] text-slate-800 mt-1">3.配送到校</span>
-                  </div>
-                  <div class="p-2 rounded bg-white border border-slate-150 text-center">
-                    <span class="text-[9px] font-extrabold text-brand bg-brand-light w-4 h-4 rounded-full inline-flex items-center justify-center">4</span>
-                    <span class="block font-bold text-[10px] text-slate-800 mt-1">4.學生帶回</span>
-                  </div>
-                </div>
-                <div class="p-3 bg-white border border-slate-200 rounded-xl text-[11px] text-slate-600 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-                  <span>🏭 <strong>廠商：</strong>一富有限公司</span>
-                  <span>📞 <strong>專線：</strong><a href="tel:02-2971-2213" class="text-brand font-bold hover:underline">(02) 2971-2213</a></span>
-                  <span>📍 <strong>地址：</strong>新北市三重區重陽路一段128號3F</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- ==================== SLIDE 5: FAQ ==================== -->
-            <div class="w-full shrink-0 px-2 md:px-4 space-y-6">
-              <div class="w-full rounded-xl overflow-hidden border border-slate-200/40 bg-slate-100 shadow-sm relative max-h-[160px] sm:max-h-[220px]">
-                <img src="assets/panorama.png?v=4" alt="關渡國小校景" class="w-full h-full object-cover">
-              </div>
-              <div class="space-y-4">
-                <div class="flex items-center justify-between flex-wrap gap-2">
-                  <span class="inline-flex items-center px-2.5 py-0.5 rounded bg-slate-100 text-brand font-bold text-xs uppercase tracking-wider">常見問答 / FAQ & Inquiries</span>
-                  <div class="flex flex-wrap gap-1.5">
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">常見問答</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">現場付現</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">預購流程</span>
-                    <span class="px-2.5 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-500 text-[10px] font-bold">生教組聯絡</span>
-                  </div>
-                </div>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-brand-dark tracking-tight">
-                  🤔 制服怎麼買？看這裡就懂！ <span class="text-slate-400 font-normal">| Uniform FAQ</span>
-                </h2>
-                
-                <div class="grid gap-2 text-xs sm:text-sm">
-                  <details class="bg-white border border-slate-200 rounded-xl p-3 cursor-pointer group">
-                    <summary class="font-bold text-slate-800 flex justify-between items-center">
-                      <span>Q1：夏季制服怎麼買？</span>
-                      <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform text-[10px]"></i>
-                    </summary>
-                    <!-- Updated with pricing: Summer Sets $300 + $210 = $510 -->
-                    <p class="text-slate-600 mt-2 pl-2 leading-relaxed">
-                      <strong>A</strong>：現場選購 ➔ 付現金 💰 ➔ 當場帶回家 🎉（包含：短袖上衣 <strong>$300 元</strong>、短褲 <strong>$210 元</strong>，一套共計 <strong>$510 元</strong>）。
-                    </p>
-                  </details>
-                  <details class="bg-white border border-slate-200 rounded-xl p-3 cursor-pointer group">
-                    <summary class="font-bold text-slate-800 flex justify-between items-center">
-                      <span>Q2：冬季制服也是現場買嗎？</span>
-                      <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform text-[10px]"></i>
-                    </summary>
-                    <!-- Updated with pricing: Winter Sets $340 + $300 = $640 -->
-                    <p class="text-slate-600 mt-2 pl-2 leading-relaxed">
-                      <strong>A</strong>：不是喔！冬季制服採<strong>預購制</strong> 📝。現場僅需填寫預購單，費用之後會跟三聯單一起收取，預計 10/30 前發放（包含：長袖上衣 <strong>$340 元</strong>、長褲 <strong>$300 元</strong>，預購小計 <strong>$640 元</strong>）。
-                    </p>
-                  </details>
-                  <details class="bg-white border border-slate-200 rounded-xl p-3 cursor-pointer group">
-                    <summary class="font-bold text-slate-800 flex justify-between items-center">
-                      <span>Q3：那我當天要準備多少錢？</span>
-                      <i class="fa-solid fa-chevron-down text-slate-400 group-open:rotate-180 transition-transform text-[10px]"></i>
-                    </summary>
-                    <!-- Updated with pricing -->
-                    <p class="text-slate-600 mt-2 pl-2 leading-relaxed">
-                      <strong>A</strong>：家長當天只需要準備<strong>夏季制服</strong>的現金費用 <strong>$510 元</strong>（短袖上衣 $300 + 短褲 $210）即可！冬季制服的錢（$640 元），之後再跟學校三聯單一起繳就好囉～ 😊
-                    </p>
-                  </details>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Next Arrow (Always visible & absolute) -->
-        <button onclick="nextSlide()" class="absolute right-1 sm:right-4 md:right-6 z-20 flex w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-sm focus:outline-none" title="下一頁">
-          <i class="fa-solid fa-chevron-right text-xs"></i>
-        </button>
-
-      </div>
-
-      <!-- CAROUSEL TIMELINE PROGRESS INDICATORS -->
-      <!-- Duplicated indicators at bottom removed since they are moved to the top! -->
-    </section>
-
-
-    <!-- 🟢 SECTION 3: ADMINISTRATIVE DOCUMENT DOWNLOADS (常用表單與規定 - Carousel 2!) -->
-    <!-- Fully updated with user's official detailed regulations and elegant scroll bar controls -->
-    <section id="documents" class="py-16 px-6 md:px-12 bg-slate-100 border-t border-slate-200 scroll-mt-24 flex flex-col justify-start">
-      
-      <!-- 
-        ★ DOCUMENT CAROUSEL INDICATORS (Moved to the TOP of Carousel 2!) ★
-        已同步進行 100% 對稱上移，並將字體縮小為更精細簡潔的 text-[10px] sm:text-xs 格式，完美對齊
-      -->
-      <div class="max-w-4xl mx-auto w-full px-4 pb-6 border-b border-slate-200/60 flex justify-between items-center gap-2 select-none overflow-x-auto mb-6">
-        <button onclick="goToDocSlide(0)" id="doc-indicator-0" class="doc-indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group active-doc-indicator">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-bold text-slate-400 group-hover:text-brand transition-colors">學生請假單</span>
-          <div class="doc-indicator-line w-3 group-hover:w-6"></div>
-          <div class="doc-indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToDocSlide(1)" id="doc-indicator-1" class="doc-indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group">
-          <span class="text-[10px] sm:text-[11px] md:text-xs font-bold text-slate-400 group-hover:text-brand transition-colors">外出申請單</span>
-          <div class="doc-indicator-line w-3 group-hover:w-6"></div>
-          <div class="doc-indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-        <button onclick="goToDocSlide(2)" id="doc-indicator-2" class="doc-indicator-btn flex items-center gap-1 focus:outline-none shrink-0 group">
-          <span class="text-[10px] font-bold text-slate-400 group-hover:text-brand transition-colors">行動載具同意書</span>
-          <div class="doc-indicator-line w-3 group-hover:w-6"></div>
-          <div class="doc-indicator-bullet w-2 h-2 rounded-full border border-slate-300 bg-white transition-all shrink-0"></div>
-        </button>
-      </div>
-
-      <!-- Main Document Carousel Frame (Arrows made relative & visible on mobile!) -->
-      <div class="max-w-4xl mx-auto px-2 md:px-12 flex items-center select-none relative w-full">
-        
-        <!-- Prev Arrow (Carousel 2) -->
-        <button onclick="activeDocIndex = (activeDocIndex - 1 + totalDocSlides) % totalDocSlides; updateDocCarousel();" class="absolute left-1 sm:left-4 md:left-6 z-20 flex w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-md focus:outline-none" title="上一頁">
-          <i class="fa-solid fa-chevron-left text-xs"></i>
-        </button>
-
-        <!-- Carousel Frame -->
-        <div class="w-full overflow-hidden rounded-2xl border-2 border-slate-200 bg-white p-3 md:p-6 shadow-md relative mx-6 sm:mx-10">
-          <div class="doc-carousel-track" id="doc-carousel-track">
-            
-            <!-- Slide 1: 學生請假單 -->
-            <div class="w-full shrink-0 px-2 md:px-4 grid md:grid-cols-12 gap-6 items-stretch">
-              <!-- Left side: File Info & download -->
-              <div class="md:col-span-5 flex flex-col justify-between gap-4 p-4 rounded-xl bg-brand-light/30 border border-slate-200">
-                <div class="space-y-3">
-                  <div class="w-12 h-12 rounded-xl bg-brand/15 text-brand flex items-center justify-center">
-                    <i class="fa-solid fa-file-invoice text-2xl"></i>
-                  </div>
-                  <h4 class="font-extrabold text-lg text-slate-900 leading-tight">學生請假單</h4>
-                  <p class="text-xs text-slate-500 leading-relaxed">學生因病假、事假或事事/喪假等原因，需請假一日以上之請假單表格。</p>
-                </div>
-                <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-bold border-t border-slate-200/60 mt-2">
-                  <a href="assets/學生請假單.docx" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
-                    <i class="fa-solid fa-file-word text-blue-500"></i>
-                    <span>WORD 檔</span>
-                  </a>
-                  <a href="assets/學生請假單.pdf" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-red-500 hover:text-red-500 text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
-                    <i class="fa-solid fa-file-pdf text-red-500"></i>
-                    <span>PDF 檔</span>
-                  </a>
-                </div>
-              </div>
-              <!-- Right side: Official Regulations (McKinsey Check List with custom Scrollbar!) -->
-              <div class="md:col-span-7 p-4 border border-slate-200 rounded-xl flex flex-col bg-slate-50/50">
-                <span class="text-[10px] font-bold text-brand uppercase font-mono tracking-wider mb-2 flex items-center gap-1">
-                  <i class="fa-solid fa-scale-balanced"></i> 臺北市北投區關渡國民小學學生請假規則
-                </span>
-                <!-- mckinsey-scrollbar overflow box -->
-                <div class="mckinsey-scrollbar overflow-y-auto max-h-[220px] text-xs text-slate-700 pr-2 font-medium leading-relaxed space-y-2.5 text-justify">
-                  <p class="font-bold border-b border-slate-200 pb-1 text-slate-800">一、凡本校在籍學生，悉依本規則辦理請假。</p>
-                  <p><strong>二、</strong>未依本辦法完成請假手續缺席者，一律以曠課計。</p>
-                  <p><strong>三、</strong>凡連續曠課（未經請假不到校上課且無法取得聯繫）七天以上者，將依規定提報為中途輟學學生，列入復學輔導對象。</p>
-                  <p class="font-semibold text-brand">四、請假種類及限制：</p>
-                  <ul class="pl-2 space-y-1.5 list-disc list-inside">
-                    <li><strong>公假</strong>：限代表學校 or 經學校認可之單位，服務 or 執行校內外公務（需經由師長證明）</li>
-                    <li><strong>事假</strong>：有關個人及家庭事項，得准請事假。</li>
-                    <li><strong class="text-crimson">病假</strong>：因病需休養。<strong>(病假天數依學生狀況及相關疾病管制規章為準，請級任教師於學生請病假時確實了解學生狀況，必要時由學校護理師協助處理。)</strong></li>
-                    <li><strong>喪假</strong>：親屬過世，得請喪假。</li>
-                    <li><strong>臨時外出假</strong>：學生到校後，因事、生病或其他特殊原因需外出 or 先行離校。</li>
-                    <li><strong>生理假</strong>：女性學生因生理日致身體不舒服，每月得請生理假 1 日。為尊重個人隱私，該假別無須出示證明。</li>
-                    <li><strong>其他</strong>：特殊事件（依相關證明辦理）、不可抗力（天災 or 人為不可抗拒之因素）等。</li>
-                  </ul>
-                  <p class="font-semibold text-brand">五、請假手續：</p>
-                  <ul class="pl-2 space-y-1.5 list-decimal list-inside">
-                    <li>請假應由家長或監護人於事前以口頭、電話 or 書面告知級任教師。</li>
-                    <li>未能事先請假的學生，家長 or 監護人應於當天早上以電話向級任教師或學務處<span class="font-bold text-brand">(02)28912847分機222</span>請假語音專線請假。</li>
-                    <li class="font-semibold text-crimson">臨時外出的學生應由家長、級任教師、護理師 or 訓導人員填具外出單，經級任教師、學務處核章，並由家長簽名送交至警衛室檢核後，始得離去。如帶學生離校者非家長 or 監護人時，級任教師需協助確認親屬關係後簽章。父母離異之學生帶離校園時，級任教師必須確認為法定監護人或其委託人才准離校。</li>
-                    <li>公假應事先由業務單位提出，經單位主管核可後准假。</li>
-                    <li>教師因學校公務需臨時帶學生離開校園時，應通知行政單位。</li>
-                    <li>請假期滿仍不能到校上課者，應於期滿前申請續假，否則以曠課論。</li>
-                  </ul>
-                  <p class="font-semibold text-brand">六、准假權責：</p>
-                  <ul class="pl-2 space-y-1 list-none">
-                    <li>(一) 三日以內者由級任老師核准。</li>
-                    <li>(二) 超過三日、五日以內者由生活教育組核准。</li>
-                    <li>(三) 超過五日、七日以內者由學務主任核准。</li>
-                    <li>(四) 超過七日者陳請校長核准。</li>
-                    <li>(五) 凡無故缺課或未依規定完成請假手續者，超過三日則逐級核章呈報相關單位依法處理。</li>
-                  </ul>
-                  <p class="font-semibold text-brand">七、教師注意事項：</p>
-                  <ul class="pl-2 space-y-1 list-none">
-                    <li>(一) 任課教師應掌握上課班級學生出缺席情況，如有未到學生應查明動向並通知級任教師 or 相關行政單位處理。</li>
-                    <li>(二) 學生請假必須事前向級任教師辦理，級任教師應將學生請假假別、日期記錄於相關簿冊及系統內。</li>
-                    <li>(三) 級任教師發現學生有請假異常時，即應聯繫家長輔導。</li>
-                    <li>(四) 凡學生有缺曠課情況，級任教師應即時以電話聯絡家長，了解學生動向。</li>
-                    <li>(五) 學生連續曠課滿三日，由級任教師填寫「中途輟學學生通報表」，並報請相關處組辦理。</li>
-                  </ul>
-                  <p class="font-semibold text-crimson">八、考試期間規範：</p>
-                  <p>除重病 or 重大事故外，不得請假。請病假需有醫院「急診或住院」證明，並應於請假翌日起三日內提出證明辦理手續；請事假、公假 or 喪假需有相關之證明文件，經級任老師核准並於註冊組登記，方可依本校學則辦理補考。</p>
-                  <p class="text-[10px] text-slate-400">九、如有未盡事宜，悉依相關法令及規定辦理。</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2: 外出申請單 -->
-            <div class="w-full shrink-0 px-2 md:px-4 grid md:grid-cols-12 gap-6 items-stretch">
-              <div class="md:col-span-5 flex flex-col justify-between gap-4 p-4 rounded-xl bg-brand-light/30 border border-slate-200">
-                <div class="space-y-3">
-                  <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                    <i class="fa-solid fa-person-walking-arrow-right text-2xl"></i>
-                  </div>
-                  <h4 class="font-extrabold text-lg text-slate-900 leading-tight">學生臨時外出申請單</h4>
-                  <p class="text-xs text-slate-500 leading-relaxed">學生於課堂上學期間因病、因急事需臨時出校之家長接送核章申請單。</p>
-                </div>
-                <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-bold border-t border-slate-200/60 mt-2">
-                  <a href="assets/學生臨時外出申請單.docx" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
-                    <i class="fa-solid fa-file-word text-blue-500"></i>
-                    <span>WORD 檔</span>
-                  </a>
-                  <a href="assets/學生臨時外出申請單.pdf" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-red-500 hover:text-red-500 text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
-                    <i class="fa-solid fa-file-pdf text-red-500"></i>
-                    <span>PDF 檔</span>
-                  </a>
-                </div>
-              </div>
-              <div class="md:col-span-7 p-4 border border-slate-200 rounded-xl flex flex-col bg-slate-50/50">
-                <span class="text-[10px] font-bold text-brand uppercase font-mono tracking-wider mb-2 flex items-center gap-1">
-                  <i class="fa-solid fa-user-shield"></i> 學生課堂期間臨時外出管理辦法
-                </span>
-                <div class="mckinsey-scrollbar overflow-y-auto max-h-[220px] text-xs text-slate-700 pr-2 font-medium leading-relaxed space-y-2.5 text-justify">
-                  <p><strong>一、家長接送原則：</strong>學生到校後，非放學時間因事、生病或其他特殊原因需臨時外出或離校，<strong>家長必須親自到校辦理接送</strong>。</p>
-                  <p><strong>二、審核與簽章：</strong>家長、級任教師 or 護理師需填寫臨時外出申請單。經級任導師核章、學務處（生教組）核准同意，警衛室核對簽名後始得放行離校。</p>
-                  <p><strong>三、監護身分確認：</strong>若前來帶領學生離校者非家長，級任導師必須電話聯繫確認親屬關係。父母離異之學生，必須確認接送人具備法定監護人身分或經其委託才准離校。</p>
-                  <p><strong>四、銷假機制：</strong>如學生外出就醫後，需於當日返回學校，請於回校時先至學務處生教組辦理返校登記並銷假，以利確實登載在學出缺席系統中。</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3: 手機暨行動載具同意書 -->
-            <div class="w-full shrink-0 px-2 md:px-4 grid md:grid-cols-12 gap-6 items-stretch">
-              <div class="md:col-span-5 flex flex-col justify-between gap-4 p-4 rounded-xl bg-brand-light/30 border border-slate-200">
-                <div class="space-y-3">
-                  <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center">
-                    <i class="fa-solid fa-mobile-screen-button text-2xl"></i>
-                  </div>
-                  <h4 class="font-extrabold text-lg text-slate-900 leading-tight">手機暨行動載具同意書</h4>
-                  <p class="text-xs text-slate-500 leading-relaxed">學生攜帶手機、智慧型手錶等入校之日常管理規範與家長申請同意書。</p>
-                </div>
-                <div class="flex flex-wrap items-center gap-2 pt-2 text-xs font-bold border-t border-slate-200/60 mt-2">
-                  <a href="assets/學生攜帶手機暨行動載具申請同意書.docx" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-brand hover:text-brand text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
-                    <i class="fa-solid fa-file-word text-blue-500"></i>
-                    <span>WORD 檔</span>
-                  </a>
-                  <a href="assets/學生攜帶手機暨行動載具申請同意書.pdf" class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-red-500 hover:text-red-500 text-slate-700 transition-colors flex items-center gap-1 shadow-sm">
-                    <i class="fa-solid fa-file-pdf text-red-500"></i>
-                    <span>PDF 檔</span>
-                  </a>
-                </div>
-              </div>
-              <div class="md:col-span-7 p-4 border border-slate-200 rounded-xl flex flex-col bg-slate-50/50">
-                <span class="text-[10px] font-bold text-brand uppercase font-mono tracking-wider mb-2 flex items-center gap-1">
-                  <i class="fa-solid fa-scale-balanced"></i> 臺北市北投區關渡國民小學學生行動電話暨行動載具使用規範
-                </span>
-                <!-- McKinsey Scrollbar container -->
-                <div class="mckinsey-scrollbar overflow-y-auto max-h-[220px] text-xs text-slate-700 pr-2 font-medium leading-relaxed space-y-2.5 text-justify">
-                  <p class="text-[10px] text-slate-400 font-semibold leading-none border-b border-slate-200 pb-1">
-                    99年1月13日校務會議通過 104年8月28日校務會議修正 107年1月25日校務會議提案修正
-                  </p>
-                  <p class="font-bold text-brand">壹、依據：</p>
-                  <p class="pl-2">一、北市教中字第09838801000號函<br>二、臺北市北投區關渡國民小學校規<br>三、臺北市北投區關渡國民小學輔導與管教學生辦法<br>四、臺北市國民小學學生獎懲準則<br>五、臺北市北投區關渡國民小學學生獎懲準則補充規定</p>
-                  
-                  <p class="font-bold text-brand">貳、目的：</p>
-                  <p class="pl-2">一、維護教師課堂教學品質，增進學生有效學習，維持團體秩序。<br>二、教育學生正確使用行動電話暨行動載具的觀念，養成使用行動電話暨行動載具的禮儀，並遵守應有的公共道德與規範。</p>
-                  
-                  <p class="font-bold text-brand">參、申請程序：</p>
-                  <p class="pl-2">
-                    凡本校學生欲攜帶行動電話暨行動載具到校者，必須徵求家長（或監護人）同意後，至學務處領取「行動電話暨行動載具使用規範」與「行動電話暨行動載具攜帶到校申請暨使用規範同意書」(如附件一)。如有特殊情形需於上學時間內開機，至學務處領取「行動電話暨行動載具校園開機申請書」(如附件二)。填寫完畢後，經級任教師同意及學務處核章後，方能攜帶行動電話暨行動載具到校或於校園內開機。另請導師填寫「行動電話暨行動載具彙整表」(如附件三)交由學務處存查。
-                  </p>
-                  
-                  <p class="font-bold text-brand">肆、管理規範：</p>
-                  <ul class="pl-2 space-y-1 list-decimal list-inside">
-                    <li>行動電話暨行動載具於校園內一律關機，放學出校門後即可使用與家長聯絡。非必要請儘量不要攜帶，以免造成不必要困擾。</li>
-                    <li>如有特殊情形需於上學時間內開機，請事前取得級任老師同意，並遵守下列使用禮儀：
-                      <ul class="pl-4 list-disc list-inside">
-                        <li>保持無聲狀態</li>
-                        <li>上課時間不接聽</li>
-                        <li>具照相、錄音與錄影功能者，需尊重他人隱私</li>
-                        <li class="text-crimson font-semibold">不得任意拍攝或上傳散播檔案，以免觸犯法律；亦不得下載限制級圖影</li>
-                        <li>上課時間不得執行遊戲、影音、簡訊</li>
-                      </ul>
-                    </li>
-                    <li>行動電話暨行動載具請黏貼班級、姓名，以利辨別。</li>
-                    <li>學生應妥善保管自己財物，如行動電話暨行動載具遺失須自行負責，學校不負保管及賠償之責。</li>
-                    <li>不得於學校進行行動電話暨行動載具充電。</li>
-                  </ul>
-                  
-                  <p class="font-bold text-crimson">伍、違反「管理規範」之處理方式：</p>
-                  <ul class="pl-2 space-y-1.5 list-decimal list-inside">
-                    <li>未經申請攜帶行動電話暨行動載具，交由學務處暫時保管，並請家長（或監護人）到校領回物品。</li>
-                    <li class="font-semibold text-slate-800">已申請攜帶行動電話暨行動載具而違反管理規範第一條及第三條第一至五項者：
-                      <ul class="pl-4 list-disc list-inside">
-                        <li>第一次：口頭訓誡，並通知家長。</li>
-                        <li>第二次：行動電話暨行動載具由導師暫時保管，並請學生當天領回且通知家長。</li>
-                        <li>第三次：行動電話暨行動載具由學務處暫時保管，並請學生當天領回且通知家長。</li>
-                      </ul>
-                    </li>
-                    <li>未遵守「管理規範」屢勸不聽超過三次以上者，取消該學期攜帶行動電話暨行動載具之資格，同時行動電話暨行動載具交由學務處暫時保管，並請家長（或監護人）到校領回物品。</li>
-                    <li class="text-crimson font-bold">與同學發生爭執，而利用行動電話暨行動載具呼朋引伴滋事，情節嚴重者，學校除依校規懲處外，且取消當學期攜帶資格。</li>
-                    <li>被取消攜帶資格而再攜帶到校者，均按第伍點第一條處理。</li>
-                  </ul>
-                  
-                  <p class="font-bold text-brand border-t border-slate-200 pt-3">【附件一】攜帶到校申請使用規範同意書</p>
-                  <p><strong>壹、申請程序：</strong>凡本校學生欲攜帶行動電話暨行動載具到校者，必須徵求家長（或監護人）同意後，至學務處領取「行動電話暨行動載具攜帶到校申請使用規範同意書」。</p>
-                  <p><strong>貳、管理規範：</strong></p>
-                  <ul class="pl-2 space-y-1 list-none">
-                    <li>一、行動電話暨行動載具於校園內一律關機，放學鐘聲響後，方可使用與家長聯絡。</li>
-                    <li>二、如有特殊情形需於上學時間內開機，需事前取得級任或學務處老師同意，並遵守下列使用禮儀：保持無聲狀態、上課不接聽、具照相/錄音/錄影功能者需尊重他人隱私、不得任意拍攝或上傳散播檔案、不得執行任何遊戲與影音。</li>
-                    <li>三、行動電話暨行動載具請黏貼班級、姓名，以利辨別。</li>
-                    <li>四、不得於學校進行行動電話暨行動載具充電。</li>
-                  </ul>
-                  <p><strong>大、違反「管理規範」之處理方式：</strong></p>
-                  <ul class="pl-2 space-y-1 list-none">
-                    <li>一、未經申請攜帶者，第一次口頭訓誡；第二次再犯者，交由學務處暫時保管，並請家長到校領回物品。</li>
-                    <li>二、已申請攜帶而違反規範者，第一次口頭訓誡。第二次再犯者，由導師暫時保管並通知家長。第三次再犯者，由學務處暫時保管且通知家長領回。</li>
-                    <li>三、未遵守「管理規範」屢勸不聽超過三次以上者，取消該學期攜帶資格，同時交由學務處暫時保管，並請家長到校領回。</li>
-                  </ul>
-                  <p class="text-[10px] text-slate-400">肆、本辦法修正後經校務會議通過後實施，修正時亦同。</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Next Arrow (Carousel 2) -->
-        <button onclick="activeDocIndex = (activeDocIndex + 1) % totalDocSlides; updateDocCarousel();" class="absolute right-1 sm:right-4 md:right-6 z-20 flex w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 bg-white/95 hover:bg-slate-50 text-slate-500 hover:border-brand flex items-center justify-center transition-all duration-200 shrink-0 shadow-md focus:outline-none" title="下一頁">
-          <i class="fa-solid fa-chevron-right text-xs"></i>
-        </button>
-
-      </div>
-    </section>
-
-    <!-- 📧 SECTION 4: CONTACT -->
-    <div id="contact" class="scroll-mt-24 max-w-4xl mx-auto w-full px-6 mt-12 mb-6">
-      <div class="p-8 rounded-2xl border-2 border-slate-200 bg-white text-center space-y-6 shadow-sm">
-        <div class="max-w-xl mx-auto space-y-2 text-center">
-          <span class="text-xs font-bold text-brand tracking-widest uppercase">GET IN TOUCH</span>
-          <h2 class="text-xl md:text-2xl font-extrabold text-brand-dark tracking-tight">有其他制服或始業輔導疑問？</h2>
-          <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-            親愛的家長，若您對於新生始業輔導、夏季制服現場現金購買，或是冬季制服填單預購登記等業務仍有疑問，歡迎隨時透過下方生教組專用管道與我們取得聯繫。
-          </p>
-        </div>
-
-        <div class="max-w-2xl mx-auto grid sm:grid-cols-3 gap-4 text-left pt-2">
-          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1 shadow-sm">
-            <span class="text-slate-400 text-xs flex items-center gap-1"><i class="fa-solid fa-location-dot text-brand"></i> 學校地址</span>
-            <p class="text-xs font-bold text-slate-800 leading-snug pt-0.5">11257 臺北市北投區中央北路四段581號</p>
-          </div>
-          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1 shadow-sm">
-            <span class="text-slate-400 text-xs flex items-center gap-1"><i class="fa-solid fa-phone text-brand animate-pulse"></i> 生教組專線</span>
-            <p class="text-xs font-bold text-slate-800 leading-snug pt-0.5">
-              <a href="tel:02-2891-2847" class="hover:text-brand transition-colors font-black">(02)2891-2847 分機 824</a>
-            </p>
-          </div>
-          <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1 shadow-sm">
-            <span class="text-slate-400 text-xs flex items-center gap-1"><i class="fa-solid fa-envelope text-brand"></i> 生教組信箱</span>
-            <p class="text-xs font-bold text-slate-800 leading-snug pt-0.5">
-              <a href="/cdn-cgi/l/email-protection#1e5d2c5e7f6e6e6d30757a6e6d306a6e307b7a6b306a69" class="hover:text-brand transition-colors font-black"><span class="__cf_email__" data-cfemail="70334230110000035e1b1400035e04005e1514055e0407">[email&#160;protected]</span></a>
-            </p>
-          </div>
-        </div>
-
-        <!-- External links -->
-        <div class="flex justify-center items-center gap-4 text-xs font-bold text-slate-500 pt-2 border-t border-slate-200/50 max-w-sm mx-auto">
-          <a href="http://www.kdps.tp.edu.tw/" target="_blank" class="hover:text-brand flex items-center gap-1.5">
-            <i class="fa-solid fa-globe"></i>
-            <span>關渡國小官網</span>
-          </a>
-          <span class="text-slate-300">|</span>
-          <a href="https://www.facebook.com/p/%E8%87%BA%E5%8C%97%E5%B8%82%E9%97%9C%E6%B8%A1%E5%9C%8B%E5%B0%8F-100057330825001/" target="_blank" class="hover:text-brand flex items-center gap-1.5">
-            <i class="fa-brands fa-facebook-f"></i>
-            <span>官網粉絲專頁</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800">
-    <div class="max-w-4xl mx-auto px-6 space-y-8">
-      
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 border-b border-slate-800 pb-8">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center p-0.5 overflow-hidden border border-slate-700">
-            <img src="assets/logo.png" alt="關渡國小校徽" class="w-full h-full object-contain">
-          </div>
-          <div class="flex flex-col">
-            <span class="font-bold text-sm text-slate-200">臺北市關渡國民小學學務處生教組</span>
-            <span class="text-[8px] font-mono tracking-widest text-slate-500 uppercase">Guandu School · Student Life & Education</span>
-          </div>
-        </div>
-        <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-slate-400">
-          <button onclick="goToSlide(0)" class="hover:text-slate-200 transition-colors">一、開學時程</button>
-          <button onclick="goToSlide(1)" class="hover:text-slate-200 transition-colors">二、夏季服裝</button>
-          <button onclick="goToSlide(2)" class="hover:text-slate-200 transition-colors">三、冬季服裝</button>
-          <button onclick="goToSlide(4)" class="hover:text-slate-200 transition-colors">常見問答 FAQ</button>
-        </div>
-      </div>
-
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[10px] text-slate-500">
-        <div class="space-y-1">
-          <p>© 2026 臺北市立關渡國民小學學務處生教組 版權所有. All rights reserved.</p>
-          <p>聯絡窗口：生教組長 (02)2891-2847 分機 824 | 傳真：(02)2895-2910 | 郵箱：<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cd8eff8dacbdbdbee3a6a9bdbee3b9bde3a8a9b8e3b9ba">[email&#160;protected]</a></p>
-        </div>
-        <div class="flex items-center gap-3 shrink-0">
-          <a href="#" class="hover:underline">網頁隱私權宣告</a>
-          <span class="text-slate-700">|</span>
-          <span class="text-slate-500/80">Designed by Arena AI (Agent Mode)</span>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-
-  <!-- JAVASCRIPT CAROUSEL LOGIC -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Scroll progress indicator
-    window.addEventListener('scroll', () => {
-      const scrollProgress = document.getElementById('scroll-progress');
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progressWidth = (window.pageYOffset / totalHeight) * 100;
-      scrollProgress.style.width = progressWidth + '%';
-    });
-
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-
-    mobileMenuToggle.addEventListener('click', () => {
-      const isClosed = mobileMenu.classList.contains('translate-x-full');
-      if (isClosed) {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenu.classList.add('translate-x-0');
-        menuIcon.classList.remove('fa-bars');
-        menuIcon.classList.add('fa-xmark');
-      } else {
-        closeMobileMenu();
-      }
-    });
-
-    function closeMobileMenu() {
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
-      menuIcon.classList.remove('fa-xmark');
-      menuIcon.classList.add('fa-bars');
-    }
-
-    const sections = document.querySelectorAll('.fade-in-section');
-    const observerOptions = {
-      root: null,
-      threshold: 0.05,
-      rootMargin: "0px 0px -30px 0px"
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-
-    // ────────────────────────────────────────────────────────
-    // ★ HARDWARE-ACCELERATED HORIZONTAL CAROUSEL 1 LOGIC (Uniforms) ★
-    // ────────────────────────────────────────────────────────
-    let activeIndex = 0;
-    const totalSlides = 5;
-    const track = document.getElementById('carousel-track');
-
-    function updateCarousel() {
-      track.style.transform = `translateX(-${activeIndex * 100}%)`;
-
-      document.querySelectorAll('.indicator-btn').forEach((btn, idx) => {
-        if (idx === activeIndex) {
-          btn.classList.add('active-indicator');
-        } else {
-          btn.classList.remove('active-indicator');
-        }
-      });
-    }
-
-    function nextSlide() {
-      activeIndex = (activeIndex + 1) % totalSlides;
-      updateCarousel();
-    }
-
-    function prevSlide() {
-      activeIndex = (activeIndex - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    }
-
-    // Smooth jumps to slides
-    function goToSlide(index) {
-      if (index >= 0 && index < totalSlides) {
-        activeIndex = index;
-        updateCarousel();
-        document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-    // Support touch swiping on mobile devices (Carousel 1)
-    let startX = 0;
-    let endX = 0;
-    
-    track.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-    }, { passive: true });
-
-    track.addEventListener('touchend', (e) => {
-      endX = e.changedTouches[0].clientX;
-      endY = e.changedTouches[0].clientY;
-      handleSwipe();
-    }, { passive: true });
-
-    function handleSwipe() {
-      const diffX = startX - endX;
-      const diffY = startY - endY;
-      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
-        if (diffX > 0) {
-          nextSlide();
-        } else {
-          prevSlide();
-        }
-      }
-    }
-
-    // ────────────────────────────────────────────────────────
-    // ★ HARDWARE-ACCELERATED HORIZONTAL CAROUSEL 2 LOGIC (Documents) ★
-    // ────────────────────────────────────────────────────────
-    let activeDocIndex = 0;
-    const totalDocSlides = 3; /* Corrected to 3 slides since alarm is removed! */
-    const docTrack = document.getElementById('doc-carousel-track');
-
-    function updateDocCarousel() {
-      docTrack.style.transform = `translateX(-${activeDocIndex * 100}%)`;
-
-      document.querySelectorAll('.doc-indicator-btn').forEach((btn, idx) => {
-        if (idx === activeDocIndex) {
-          btn.classList.add('active-doc-indicator');
-        } else {
-          btn.classList.remove('active-doc-indicator');
-        }
-      });
-    }
-
-    function goToDocSlide(index) {
-      if (index >= 0 && index < totalDocSlides) {
-        activeDocIndex = index;
-        updateDocCarousel();
-        document.getElementById('documents').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-
-    // Support touch swiping on mobile devices (Carousel 2)
-    let startDocX = 0;
-    let endDocX = 0;
-    
-    docTrack.addEventListener('touchstart', (e) => {
-      startDocX = e.touches[0].clientX;
-      startDocY = e.touches[0].clientY;
-    }, { passive: true });
-
-    docTrack.addEventListener('touchend', (e) => {
-      endDocX = e.changedTouches[0].clientX;
-      endDocY = e.changedTouches[0].clientY;
-      handleDocSwipe();
-    }, { passive: true });
-
-    function handleDocSwipe() {
-      const diffX = startDocX - endDocX;
-      const diffY = startDocY - endDocY;
-      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
-        if (diffX > 0) {
-          activeDocIndex = (activeDocIndex + 1) % totalDocSlides;
-        } else {
-          activeDocIndex = (activeDocIndex - 1 + totalDocSlides) % totalDocSlides;
-        }
-        updateDocCarousel();
-      }
-    }
-  </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2dfc5abd8a54aa3',t:'MTc4NzIxMTg1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
