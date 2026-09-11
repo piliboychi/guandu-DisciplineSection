@@ -9,7 +9,7 @@
 | `index.html` | **總頁面**：公告列表，家長進入的第一頁 |
 | `uniform.html` | 115學年度制服購買公告（販售日程、夏/冬制服價格、平日補購、FAQ） |
 | `uniform-rule.html` | 服裝規定：全校每週二穿著制服 |
-| `forms.html` | 常用表單下載（請假單、臨時外出單、手機暨行動載具同意書） |
+| `forms.html` | 常用表單下載（不用午餐須先行離校申請單、請假單、臨時外出單、手機暨行動載具同意書） |
 | `traffic.html` | 上放學交通與接送宣導（**範例頁**，內容請依學校實際狀況調整） |
 | `template.html` | **新增公告用範本**（對外發布時不需上傳這個檔） |
 | `README.md` | 本說明 |
@@ -21,8 +21,8 @@
 
 - **uniform.html**：115學年度制服購買公告（**已改版**：取消 8/22、9/3 大門口現場販售，全面改為電話向一富有限公司訂購 → 轉帳付款 → 配送到校 → 學生帶回；價格為夏季 $300/$210（一套 $510）、冬季 $340/$300（一套 $640、10/30 前交貨）；一富專線 (02)2971-2213）。
   ⚠️ 若冬季制服實際仍走「三聯單收費」而非轉帳付款，請修改第二節冬季表格之「說明」欄。
-- **forms.html**：表單下載按鈕直接連到**原網站 assets 的 Word（.doc）／PDF 檔**（`piliboychi.github.io/guandu-uniform/assets/…`），所以**請保留舊網站、不要刪除 assets 資料夾**，家長才能正常下載。（注意：原網站的「WORD 檔」按鈕其實是壞的——檔案為 .doc 而非 .docx，本版已修正。）
-- **traffic.html**：上放學交通與接送宣導。含家長會與志工團製作之「上下課安全提醒」海報（圖片放在 **`assets/safety-poster.jpg`**，上傳時要放進 `assets` 資料夾，不要放根目錄）；放學時間為**中午 12:40、下午 15:50**。
+- **forms.html**：表單下載按鈕直接連到**原網站 assets 的 Word（.doc）／PDF 檔**（`piliboychi.github.io/guandu-uniform/assets/…`），所以**請保留舊網站、不要刪除 assets 資料夾**，家長才能正常下載。（注意：原網站的「WORD 檔」按鈕其實是壞的——檔案為 .doc 而非 .docx，本版已修正。）🆕 已新增「**不用午餐須先行離校申請單**」（因應生生吃午餐、中午放學延後至 12:40，12:00 提早離校須申請），PDF 檔請上傳至 `assets/` 資料夾。
+- **traffic.html**：上放學交通與接送宣導。含家長會與志工團製作之「上下課安全提醒」海報（圖片放在 **`assets/safety-poster.jpg`**，上傳時要放進 `assets` 資料夾，不要放根目錄）；放學時間為**中午 12:40、下午 15:50**，並說明中午 12:00 未經申請不得提早離校、可下載「不用午餐須先行離校申請單」。
   ⚠️ 警衛室分機 199 為參考值，請改成實際分機。
 
 ## 三、如何新增一則公告（4 步驟）
@@ -51,7 +51,7 @@
    - 同名檔案（`index.html`）會自動**覆蓋**舊版，畫面會顯示已取代，沒問題。
    - **不要把 .html 檔案放進子資料夾**，要直接放在上傳區（專案根目錄），分頁網址才會是 `…/guandu-uniform/uniform.html`。
    - ⚠️ **不要刪除原有的 `assets` 資料夾**，表單下載連結才不會失效。
-4. 再上傳海報圖片：點進專案裡的 **`assets` 資料夾** → 「Add file → Upload files」→ 上傳 **`safety-poster.jpg`**。這張圖**必須放在 `assets` 資料夾內**，`traffic.html` 才能讀到（網址為 `…/guandu-uniform/assets/safety-poster.jpg`）。
+4. 再上傳海報圖片：點進專案裡的 **`assets` 資料夾** → 「Add file → Upload files」→ 上傳 **`safety-poster.jpg`**。這張圖**必須放在 `assets` 資料夾內**，`traffic.html` 才能讀到（網址為 `…/guandu-uniform/assets/safety-poster.jpg`）。同時把 **`不用午餐須先行離校申請單.pdf`** 一起上傳進 `assets` 資料夾（網址為 `…/guandu-uniform/assets/不用午餐須先行離校申請單.pdf`），`forms.html` 的下載按鈕才能用。
 5. 下方 Commit 訊息可留預設，點「**Commit changes**」→ 選「**Commit directly to the main branch**」→「Commit changes」。
 6. 等 1～2 分鐘，開啟 <https://piliboychi.github.io/guandu-uniform/> 看到「生教組公告專區」總頁面即成功；如還是舊畫面，按 **Ctrl+F5** 強制重新整理。
 
